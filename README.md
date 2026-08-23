@@ -40,7 +40,7 @@
 ```bash
 # Windows（PowerShell）
 python -m venv .venv
-.venv\Scripts\python -m pip install -e .        # 安装 src 包（pyproject 驱动，含全部依赖）
+.venv\Scripts\python -m pip install -e ".[dev,gui]"   # 安装 src 包 + 测试工具 + 桌面 GUI 依赖
 
 # 跑测试
 .venv\Scripts\python -m pytest tests/ -q
@@ -48,6 +48,9 @@ python -m venv .venv
 # CLI 分析内置示例（两种等价入口）
 .venv\Scripts\lictracer analyze sample.py --format json
 .venv\Scripts\python -m src.cli.main analyze sample.py --format json
+
+# 启动桌面端（开发态；打包发布见下方「部署形态」）
+.venv\Scripts\lictracer-gui
 ```
 
 > 安装后 `import src.*` 由已安装包解析，代码中不再有 `sys.path` hack。

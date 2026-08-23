@@ -222,6 +222,7 @@ def analyze_text(
     project_license=None,
     top_k=None,
     kb_path=None,
+    min_anchor_lines=None,
     include_summary=True,
 ) -> dict:
     """直接分析代码文本（无文件时使用）。"""
@@ -238,6 +239,7 @@ def analyze_text(
             project_license=project_license,
             top_k=top_k,
             kb_path=kb_path,
+            min_anchor_lines=min_anchor_lines,
             include_summary=include_summary,
         )
     finally:
