@@ -1,0 +1,4 @@
+[
+  {"file": "data/knowledge_base/projects/requests/send_request.py", "project": "requests", "license": "MIT", "line_start": 2, "line_end": 3, "similarity": 0.92},
+  {"file": "data/knowledge_base/projects/finance-lib/calculate_interest.py", "project": "finance-lib", "license": "GPL-3.0", "line_start": 6, "line_end": 7, "similarity": 0.88}
+]

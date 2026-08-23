@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LicTracer 评估基准报告 v4.1</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2933; --muted:#52606d; --line:#e4e7eb;
+    --card:#f8fafc; --accent:#2563eb; --good:#18794e; --warn:#b54708; --bad:#b42318;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--fg);line-height:1.65;margin:0;padding:32px;}
+  .wrap{max-width:1000px;margin:0 auto;}
+  header{border-bottom:3px solid var(--accent);padding-bottom:14px;margin-bottom:22px;}
+  h1{font-size:24px;margin:0 0 6px}
+  h2{font-size:19px;margin:30px 0 10px;padding-left:10px;border-left:4px solid var(--accent);}
+  h3{font-size:15px;margin:18px 0 6px;color:var(--muted);}
+  .sub{color:var(--muted);font-size:13px;}
+  .verdict{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;margin:18px 0;font-size:14px;}
+  .verdict b{color:var(--accent);}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;margin:10px 0 4px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--card);font-weight:600;}
+  code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:12.5px;}
+  .tag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:600;color:#fff;}
+  .tag.p{background:var(--good)} .tag.w{background:var(--warn)} .tag.b{background:var(--bad)}
+  .num{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;}
+  .kpi .v{font-size:24px;font-weight:700;font-family:ui-monospace,monospace;color:var(--accent);}
+  .kpi .l{font-size:12px;color:var(--muted);margin-top:4px;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;font-size:13px;color:#7c4a03;margin:12px 0;}
+  .lim{background:#fef2f2;border:1px solid #fecaca;color:#7f1d1d;border-radius:8px;padding:12px 14px;font-size:13px;margin:12px 0;}
+  ul{margin:8px 0;padding-left:22px;} li{margin:4px 0;}
+  footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>LicTracer 评估基准报告（v4.2）</h1>
+  <div class="sub">受控合成基准 + 真实开源语料基准 + 混合许可证基准 · 更新于 2026-08-23（v3.1 主证据融合 / v4 主证据驱动的合规聚合 / v4.1 真实 GPL·MPL·LGPL 干扰包 / v4.2 真实语料扩至 11 包·111 实体）· 证据可复现：<br>
+    <code>python -m evaluation.generate_benchmark &amp;&amp; python -m evaluation.run_eval</code>（合成）<br>
+    <code>python -m evaluation.real_corpus &amp;&amp; python -m evaluation.run_eval --bench benchmark_real</code>（真实语料）<br>
+    <code>python -m evaluation.benchmark_mixed</code>（混合许可证：误报量化）</div>
+</header>
+
+<div class="verdict">
+  <b>核心结论：</b>在<b>双基准</b>（受控合成 57 查询 + 真实开源语料 484 查询）上，多特征 MinHash 相似召回（运算符感知分词 + Winnowing 指纹 + AST 子树哈希）溯源粗筛层对精确 / 改名 / near-miss / 语句删除 / 语句重排 / 类属性 / 跨文件克隆的<b>候选召回 100%</b>（Recall/Precision/F1 均 1.000），合规推理引擎<b>判定 100% 正确</b>（含 GPL-2.0 / LGPL-3.0 / MPL-2.0 不兼容包的正向「正确拒绝」用例）。
+  经<b>确定性等价验证器</b>（L1 规范型精确相等 / L2 结构语句序列包含（函数体 / 类体 / 模块级）/ L3 锚点行游程，决策路径<b>无浮点阈值</b>），<b>端到端召回、确定性证据率与合规判定准确率在双基准上均达 1.000</b>，负样本零假阳性。
+  v3.1 引入<b>主证据融合（次优证据融合：布尔判定门控 × 相似度排序）</b>——真实跨项目代码中的弱结构伪匹配（如小段 L2 包含、低相似度）不再扰动归属，<b>归属准确率双基准实测 1.000</b>，完全并列歧义由报告显式标记（`attribution_ambiguous`）。
+  v4 引入<b>主证据驱动的合规聚合</b>——非主证据的弱证据段（L3/4）仅作展示、不参与合规结论；v4.1 将干扰实体替换为<b>真实 GPL/MPL/LGPL 开源包</b>（beancount GPL-2.0 / mozinfo MPL-2.0 / python-telegram-bot LGPL-3.0，58 个自然 L3 弱匹配真实函数），混合许可证基准实测<b>合规误报从旧聚合 149 条降至 0 条</b>（100% 消除），归属准确率保持 1.000。v4.2 将真实语料扩至 <b>11 包 / 111 实体 / 484 查询</b>（新增 altair / scipy / beancount / mozinfo / python-telegram-bot），并修复<b>方法签名哈希碰撞</b>（`_def_signature_hash` 补方法名）与 <b>L2a 函数体判定收窄至模块级函数</b>（类内短方法体不再产生 L2 强证据）、L2b 加 <code>MIN_L2_STMTS</code> 空壳类门槛——真实语料五指标保持 <b>1.000</b>。
+</div>
+
+<div class="grid">
+  <div class="kpi"><div class="v">1.000</div><div class="l">粗筛召回（多特征 MinHash）</div></div>
+  <div class="kpi"><div class="v">1.000</div><div class="l">端到端召回 (确定性验证)</div></div>
+  <div class="kpi"><div class="v">1.000</div><div class="l">确定性证据率 (L1/L2/L3)</div></div>
+  <div class="kpi"><div class="v">1.000</div><div class="l">合规判定准确率</div></div>
+  <div class="kpi"><div class="v">1.000</div><div class="l">归属准确率 (主证据融合)</div></div>
+</div>
+
+<h2>1. 评估体系与双基准构成</h2>
+<p>评估体系由<b>两个互补基准</b>组成，方法论一致（同一 harness、同一改写生成器、同一确定性验证器）：</p>
+<table>
+  <tr><th>维度</th><th>受控合成基准（data/benchmark）</th><th>真实开源语料基准（data/benchmark_real）</th></tr>
+  <tr><td>知识库来源</td><td>13 个手写「真实风格」片段，标注真实 SPDX 许可证</td><td>11 个<b>真实开源包</b>（click / datasketch / license_expression / charset_normalizer / numpy / pandas / altair / scipy / beancount / mozinfo / python-telegram-bot）用 tree-sitter 提取的<b>真实函数 / 类源码</b>（111 实体，含装饰器 / 类型标注 / 文档字符串；其中 GPL-2.0 / LGPL-3.0 / MPL-2.0 三包为「正确拒绝」不兼容正例，源码归档 <code>data/raw_sources/</code>）</td></tr>
+  <tr><td>许可证</td><td>MIT / BSD-3-Clause / Apache-2.0 / MPL-2.0 / LGPL-3.0 / GPL-2.0（含不兼容用例）</td><td>包元数据真实 SPDX；numpy / pandas 复合 SPDX（BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0）以主许可证 BSD-3-Clause 为代表参与确定性合规基准；GPL-2.0（beancount）/ LGPL-3.0（python-telegram-bot）/ MPL-2.0（mozinfo）真实不兼容包，expected_compat=INCOMPATIBLE</td></tr>
+  <tr><td>查询集</td><td>57 = 49 正 + 8 负</td><td>484 = 476 正 + 8 负（负样本经<b>确定性验证器零匹配过滤</b>：与任一 KB 实体 L1/L2/L3 全不命中）</td></tr>
+  <tr><td>改写类型</td><td colspan="2"><code>exact</code>（精确）/ <code>renamed</code>（变量·函数改名 T2）/ <code>transformed</code>（插入无关语句 near-miss T3）/ <code>deleted</code>（删中间语句）/ <code>reordered</code>（交换相邻语句）/ <code>class_attr</code>（改名类 + 插无关属性 T5）/ <code>cross_file</code>（跨文件多源拼接 T7，合成基准独有）</td></tr>
+  <tr><td>参考项目许可证</td><td colspan="2">MIT（与 <code>settings.yaml</code> 一致）</td></tr>
+  <tr><td>指标口径</td><td colspan="2">粗筛召回 / 端到端召回 / 确定性证据率 / 合规准确率 / 延迟（详见第 3、4 节）</td></tr>
+</table>
+
+<h2>2. 关键指标汇总（双基准）</h2>
+<table>
+  <tr><th>指标</th><th>合成基准</th><th>真实语料基准</th><th>说明</th></tr>
+  <tr><td>粗筛召回 Recall（多特征 MinHash）</td><td class="num">1.000</td><td class="num">1.000</td><td>正样本 top1 全部命中预期源（真实语料 476/476）</td></tr>
+  <tr><td>粗筛精确率 Precision</td><td class="num">1.000</td><td class="num">1.000</td><td>负样本零假召回</td></tr>
+  <tr><td>端到端召回 Recall（确定性验证器）</td><td class="num">1.0000</td><td class="num">1.0000</td><td>exact/renamed/transformed/deleted/reordered/class_attr 全类 1.0（L1/L2/L3 布尔判定，无阈值依赖）</td></tr>
+  <tr><td>端到端精确率 Precision</td><td class="num">1.0000</td><td class="num">1.0000</td><td>负样本零假阳性（真实语料经验证器零匹配过滤）</td></tr>
+  <tr><td>确定性证据率（正样本布尔判定占比）</td><td class="num">1.0000</td><td class="num">1.0000</td><td>全部正样本获 L1 规范型相等 / L2 结构包含 / L3 锚点游程裁决</td></tr>
+  <tr><td>归属准确率（主证据融合）</td><td class="num">1.0000</td><td class="num">1.0000</td><td>正样本主证据源（布尔判定门控 × 相似度排序）命中预期源；弱结构伪匹配不扰动归属，无 (level, sim) 完全并列歧义</td></tr>
+  <tr><td>合规判定准确率</td><td class="num">1.0000</td><td class="num">1.0000</td><td>所有查询（含负样本）判定与 ground truth 一致</td></tr>
+  <tr><td>延迟 / 查询</td><td class="num">0.51s</td><td class="num">4.37s</td><td>mean / median / p95（真实 4.368/4.203/5.482；含完整溯源+确定性验证+合规，检索器已预热；KB 11 包 111 实体，查询更长源于候选多 + 类实体 / 装饰器复杂）</td></tr>
+</table>
+
+<h2>3. 确定性等价架构与 L2 覆盖扩展</h2>
+<p>端到端判定<b>不依赖任何相似度阈值</b>，由 <code>src/provenance/exact_verifier.py</code> 做三级布尔裁决；本版将 L2 结构匹配从「仅函数体」扩展为<b>三类结构层级</b>，进一步收窄覆盖边界：</p>
+<table>
+  <tr><th>层级</th><th>判定</th><th>覆盖改写</th></tr>
+  <tr><td><b>L1</b> 规范型精确相等</td><td>去注释 / 标识符归一 + <code>VAR_n/FUNC_n→ID</code> 占位折叠空白 → 规范型相等</td><td>逐字克隆、变量 / 函数改名（T1/T2）</td></tr>
+  <tr><td><b>L2a</b> 函数体结构包含</td><td>KB 函数完整规范语句序列以<b>保序子序列</b>出现于查询函数体（容忍噪声插入任意位置）</td><td>near-miss 插入式改写（T3）</td></tr>
+  <tr><td><b>L2b</b> 类体结构包含</td><td>类属性赋值（保留左值属性名，右值规范化）+ 方法<b>签名</b>（不含方法体）的保序子序列</td><td>配置类 / 类属性克隆，改名类 / 方法仍命中（T5）</td></tr>
+  <tr><td><b>L2c</b> 模块级结构包含</td><td>纯模块级片段（无函数 / 类）的完整语句序列，保守要求 ≥ <code>MIN_MODULE_STMTS</code>=4 条防通用 import 误报</td><td>模块级克隆（T6）</td></tr>
+  <tr><td><b>L3</b> 锚点行游程</td><td>≥ <code>min_anchor_lines</code>=3 行连续规范化行命中（召回闸门）</td><td>语句删除 / 重排后残留 ≥3 连续行（T4-delete / T4-reorder）</td></tr>
+</table>
+<h3>主证据融合（次优证据融合：布尔判定门控 × 相似度排序）</h3>
+<p>为收窄真实跨项目<b>归属歧义</b>残差，v3.1 引入主证据融合（`src/pipeline.py` 的 <code>rank_primary</code> / <code>attribution_of</code>，配合聚合层「异源证据不合并」）：</p>
+<ul>
+  <li><b>聚合层（segment_aggregator）</b>：不同来源的证据即使重叠 / 相邻也<b>各自成段</b>——每段单一来源、source / license / verification_level 一致，避免「把正确来源吸收进伪匹配段而掩盖」；同源证据（间隔 ≤3 行）合并，score 取最高相似度、level 取最强；</li>
+  <li><b>主证据排序（rank_primary）</b>：段均为确定性验证产物（布尔判定先门控），在其上按 <b>(similarity 最高, verification_level 最小, source)</b> 排序，段[0] 为主证据段（<code>is_primary</code>）。相似度主导的理由：真实跨项目场景中，小段结构伪匹配（如 L2 包含）的相似度（实测 0.09–0.17）远低于正确来源（0.71–1.00），仅按布尔级排序会把伪匹配误判为主证据；相似度为 MinHash 估计值、只用于排序与展示，与「不参与克隆裁决」的既有设计一致，决策路径仍无浮点阈值；</li>
+  <li><b>归属歧义（attribution_of）</b>：存在<b>不同来源</b>的段与主证据段在 (level, similarity) 上<b>完全并列</b>（精确相等）时置 <code>attribution_ambiguous=True</code>（不静默、报告显式标记，审计者复核）；同源多段不计歧义。双基准实测无任何歧义用例。</li>
+</ul>
+<div class="note">
+  <b>跨文件多源召回：</b><code>cross_file</code> 变体拼接多个 KB 实体（requests + numpy + flask）为多源查询，ground truth 的 <code>expected_project</code> 为列表；端到端判定要求<b>所有源均被召回</b>（多源召回）。
+  <b>负样本构造：</b>真实语料负样本经<b>确定性验证器全证据零匹配过滤</b>——对每个候选逐一比对全部 KB 实体，L1/L2/L3 任一命中即剔除，覆盖单语句 L2 过度匹配等全部判定路径，从构造上保证零假阳性。
+</div>
+
+<h2>4. 逐类指标（真实语料基准，n=484）</h2>
+<table>
+  <tr><th>查询类型</th><th>n</th><th>粗筛 Recall</th><th>端到端 Recall</th><th>归属 acc</th><th>确定性率</th><th>合规 acc</th></tr>
+  <tr><td><code>exact</code>（精确克隆）</td><td>42</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>renamed</code>（变量改名 T2）</td><td>25</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>transformed</code>（near-miss T3）</td><td>42</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>deleted</code>（语句删除）</td><td>30</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>reordered</code>（语句重排）</td><td>30</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>class_attr</code>（类属性克隆 T5，L2b）</td><td>12</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td><td class="num">1.000</td></tr>
+  <tr><td><code>negative</code>（无关代码）</td><td>8</td><td class="num">1.000</td><td class="num">1.000</td><td>—</td><td>—</td><td class="num">1.000</td></tr>
+</table>
+<p>合成基准逐类（exact 15 / renamed 15 / transformed 15 / deleted 1 / reordered 1 / class_attr 1 / cross_file 1 / negative 8）同样全部 1.000。改写类型与 L2 扩展的新增用例（deleted / reordered / class_attr / cross_file）与 L2b / L2c 判定已在双基准上验证。</p>
+
+<h2>5. 合规判定准确率</h2>
+<p>合规推理（OSADL 矩阵 + Copyleft 规则 + 复合许可证拆分）在<b>双基准、确定性架构下所有查询上 100% 正确</b>（准确率 1.0000）。真实语料中 numpy / pandas 复合 SPDX 含 OSADL 未收录成分（0BSD / CC0-1.0）时系统保守判 <code>NEEDS_REVIEW</code>（正确行为）；本基准以其主许可证 BSD-3-Clause 为代表参与确定性合规度量，复合许可证解析本身由 <code>matrix_loader</code> 覆盖（另测）。</p>
+
+<h2>5.1 主证据驱动的合规聚合（混合许可证基准误报量化）</h2>
+<p>v4 引入（v4.1 以真实 GPL/MPL/LGPL 包干扰复测）<b>主证据驱动的合规聚合</b>（<code>src/pipeline.py::select_conclusion_segments</code>）：合规结论由<b>强证据段（L1/L2 全序列结构匹配）∪ 主证据段</b>（相似度最高的已验证段，即使 L3）驱动；<b>非主证据的弱证据段（L3 锚点游程 / L4 行级）仅作报告展示、不参与结论</b>（段带 <code>drives_conclusion</code> 标记，报告含 <code>conclusion_segment_ids</code>）。理由：真实跨项目弱伪匹配（相似度 0.09–0.20）若参与结论，其高危害许可证会把 COMPATIBLE 误升级为 INCOMPATIBLE / NEEDS_REVIEW。</p>
+<table>
+  <tr><th>指标（data/benchmark_mixed，n=280）</th><th>旧聚合（全段参与）</th><th>新聚合（主证据驱动）</th></tr>
+  <tr><td>合规结论错误（误报）</td><td class="num" style="color:var(--bad)">149 条（53.2%）</td><td class="num" style="color:var(--good)">0 条</td></tr>
+  <tr><td>被消除的误报</td><td colspan="2" class="num">149 / 149（100%）</td></tr>
+  <tr><td>归属准确率（主证据融合）</td><td colspan="2" class="num">1.0000</td></tr>
+  <tr><td>肇事弱段实例分布</td><td colspan="2">distractor-gpl（GPL-2.0）133 段 · distractor-mpl（MPL-2.0）29 段 · distractor-lgpl（LGPL-3.0）129 段；按改写类型：exact 37 / renamed 20 / transformed 36 / deleted 23 / reordered 20 / class_attr 13</td></tr>
+</table>
+<div class="note">
+  <b>混合基准构造（诚实声明）：</b>KB = 真实 6 包（BSD/MIT/Apache）+ <b>3 个真实 GPL/MPL/LGPL 干扰项目</b>（beancount GPL-2.0 / mozinfo MPL-2.0 / python-telegram-bot LGPL-3.0，源码归档 <code>data/raw_sources/</code>）。干扰实体 = 从真实包 tree-sitter 提取、与真实 6 包目标实体<b>自然存在 L3 锚点弱匹配</b>的函数（≥3 连续规范行重叠、非 L1/L2 完整结构，共 58 个——真实跨项目结构近邻，无任何合成代码）；负样本经确定性验证器零匹配过滤（覆盖全部 9 个项目）。<b>结论</b>：旧聚合（改动前行为）在含不兼容许可证的混合 KB 上对 53.2% 查询产生合规误报（弱伪匹配携带的高危害许可证被误纳入结论）；主证据驱动的合规聚合<b>消除全部 149 例误报</b>，且归属准确率保持 1.0——弱伪匹配不再污染结论，同时全部弱段仍显式展示于报告。
+</div>
+
+<h2>6. 诚实局限（论文须交代）</h2>
+<div class="lim">
+  <ul>
+    <li><b>双基准均为 Python、静态结构判定</b>：不覆盖语义等价重写（T4，法律上属独立派生作品）与重度交错改写（语句 A,B,C → A,X,B,Y,C 且行级游程 &lt; 3）。此类情形<b>不静默判定</b>，报告经 <code>verification_level</code> 显式暴露证据强度。</li>
+    <li><b>覆盖边界（确定性架构残差）</b>：L2 要求 KB 结构序列<b>完整</b>按序出现——语句被删除 / 重排的部分改写跌出 L2（由 L3 锚点游程捕获）；类体匹配要求保留类属性 + 方法签名结构（删属性 / 删方法签名跌出；v4.2 起<b>方法签名含方法名</b>——方法名重命名的类克隆跌出 L2b，由 L3 锚点兜底，换取消除「无参方法哈希碰撞」伪匹配）；L2a 仅对<b>模块级函数</b>生效（类内短方法体不再产生 L2 强证据）；模块级匹配仅对纯模块片段启用。</li>
+    <li><b>真实跨项目结构近邻（归属歧义已收窄）</b>：真实代码间存在结构相似的函数时，验证器<b>必能检出克隆</b>（正确项目仍在证据中，端到端召回不受影响）。v3.1 的主证据融合（布尔判定门控 × 相似度排序）将弱结构伪匹配（小段 L2 包含、相似度 0.09–0.17）与正确来源（0.71–1.00）正确区分，<b>归属准确率双基准实测 1.000</b>；仅当不同来源在 (level, similarity) 上完全并列时才置 <code>attribution_ambiguous=True</code>（报告显式标记，审计者复核）。合规结论不受该归属歧义影响；v4/v4.1 已落地主证据驱动的合规聚合（弱证据段不参与结论），真实 GPL/MPL/LGPL 混合基准误报 149→0。</li>
+    <li><b>真实语料规模与选择偏好</b>：KB 为 11 个真实包中「函数体 5–40 语句 / 类体 ≥2 成员」的中等规模实体（111 个），非整库全量；numpy / pandas 复合 SPDX 以主许可证为代表；溯源召回为<b>全库确定性 Jaccard 扫描</b>（非近似检索，召回确定性 100%），KB 规模 O(百) 文件下实测毫秒级，远高于 LSH Forest 亚线性代价生效的 2000+ 文件阈值，故 Forest 已于 2026-08-23 移除。</li>
+    <li><b>单语句 L2 特异性</b>：超通用单语句（如 <code>return a + b</code>）存在过度匹配风险，由验证级分级与证据强度标注兜底；真实语料负样本经验证器零匹配过滤后实测零假阳性。</li>
+  </ul>
+</div>
+
+<h2>7. 论文可用性与改进建议</h2>
+<ul>
+  <li><b>可写结论：</b>"在受控合成基准（n=57）与真实开源语料基准（n=484，11 真实包 / 111 实体，含 GPL·LGPL·MPL 不兼容正向用例）上，覆盖精确 / 改名 / near-miss / 语句删除 / 语句重排 / 类属性 / 跨文件克隆共 7 类改写，端到端克隆召回、确定性证据率、归属准确率与合规判定准确率均达 100%（多特征 MinHash 相似召回（运算符感知分词 + Winnowing 指纹 + AST 子树哈希）溯源粗筛 + 确定性等价验证器 L1/L2a/L2b/L2c/L3 布尔裁决，决策路径无浮点阈值；L2 已扩展至函数体 / 类体 / 模块级三层结构，L2a 仅模块级函数、L2b 方法签名含方法名 + 空壳类门槛）。"</li>
+  <li><b>须诚实交代：</b>"1.00 为可控基准结果；确定性保证覆盖逐字 / 重命名 / 插入式近邻改写 / 类属性克隆，重度交错改写与语义等价重写（T4）为残差；真实跨项目结构近邻的归属歧义已由主证据融合收窄（归属准确率实测 1.0），弱伪匹配不参与合规结论（真实 GPL/MPL/LGPL 混合许可证基准误报 149→0）。"</li>
+  <li><b>建议改进：</b>① 在 ≥2000 文件整库语料上实证全库确定性扫描的常数开销与锚点索引规模代价（Forest 已移除，仅作规模边界标注）；② 干扰项目选取偏「弱近邻」采样（仅保留与目标 L3 匹配的真实函数），真实混合 KB 中 GPL/MPL 包与参考项目结构差异更大时的误报率分布仍待更大规模实证；③ 真实语料 KB 实体为「中等规模」采样（函数 5–40 语句），超大/超小实体（巨类、单行函数）的判定行为待专项基准。</li>
+</ul>
+
+<footer>
+  数据来源：<code>data/benchmark/</code>、<code>data/benchmark_real/</code> 与 <code>data/benchmark_mixed/</code>（kb/ · queries/ · ground_truth.json · results.json）· 复现命令见页首 · 指标脚本：<code>evaluation/run_eval.py</code> · 真实语料提取：<code>evaluation/real_corpus.py</code> · 混合基准：<code>evaluation/benchmark_mixed.py</code> · 确定性验证：<code>src/provenance/exact_verifier.py</code> · 合规聚合：<code>src/pipeline.py::select_conclusion_segments</code>
+</footer>
+</div>
+</body>
+</html>

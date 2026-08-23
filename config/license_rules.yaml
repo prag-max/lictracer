@@ -1,0 +1,15 @@
+# Copyleft 策略配置（YAML 驱动）
+# license_pattern 支持前缀 / 通配符匹配；action 描述传染后果。
+copyleft_rules:
+  - license_pattern: "GPL-*"
+    link_type: "static"
+    action: "project_must_open_source"   # 静态链接：整个项目须以 GPL 开源
+  - license_pattern: "GPL-*"
+    link_type: "dynamic"
+    action: "segment_only"               # 动态链接：仅该片段及其衍生须开源
+  - license_pattern: "AGPL-*"
+    link_type: "dynamic"
+    action: "project_must_open_source"   # AGPL 网络交互即触发传染，整项目须开源
+  - license_pattern: "LGPL-*"
+    link_type: "dynamic"
+    action: "segment_only"               # LGPL 弱 copyleft：仅片段需保持 LGPL

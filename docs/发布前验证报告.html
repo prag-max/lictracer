@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LicTracer 发布前验证报告</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2933; --muted:#52606d;
+    --ok:#0b7a4b; --okbg:#e3f5ec; --warn:#9a6700; --warnbg:#fdf3d7;
+    --bad:#b42318; --badbg:#fde7e3; --line:#d9e2ec; --accent:#2563eb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.6;font-size:14px}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 24px 64px}
+  header{border-bottom:3px solid var(--accent);padding-bottom:16px;margin-bottom:24px}
+  h1{font-size:26px;margin:0 0 6px}
+  h2{font-size:19px;margin:32px 0 12px;padding-left:10px;border-left:4px solid var(--accent)}
+  h3{font-size:15px;margin:20px 0 8px;color:var(--muted)}
+  .sub{color:var(--muted);font-size:13px}
+  .verdict{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);
+           border-radius:12px;padding:18px 22px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .badge{font-weight:700;padding:8px 14px;border-radius:999px;white-space:nowrap;font-size:14px}
+  .badge.ready{background:var(--warnbg);color:var(--warn);border:1px solid var(--warn)}
+  .badge.pass{background:var(--okbg);color:var(--ok);border:1px solid var(--ok)}
+  .badge.gap{background:var(--badbg);color:var(--bad);border:1px solid var(--bad)}
+  table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);
+        border-radius:10px;overflow:hidden;margin:14px 0;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:#eef2f7;color:var(--ink);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;font-weight:600;padding:2px 8px;border-radius:6px;font-size:12px}
+  .tag.p{background:var(--okbg);color:var(--ok)}
+  .tag.f{background:var(--badbg);color:var(--bad)}
+  .tag.w{background:var(--warnbg);color:var(--warn)}
+  code{background:#eef2f7;padding:1px 6px;border-radius:5px;font-size:12.5px;font-family:"SFMono-Regular",Consolas,monospace}
+  pre{background:#0f172a;color:#e2e8f0;padding:14px 16px;border-radius:10px;overflow:auto;font-size:12.5px;line-height:1.5}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding:20px 14px}}
+  ul{margin:8px 0 8px 0;padding-left:20px}
+  li{margin:4px 0}
+  .note{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .foot{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>LicTracer —— 发布前验证报告</h1>
+    <div class="sub">面向 AI 生成代码的许可证合规审计系统 · 版本 v0.1.0 · 验证日期 2026-08-19 · 验证环境 Windows / Python 3.13</div>
+  </header>
+
+  <div class="retired" style="background:var(--badbg);border:1px solid var(--bad);color:var(--bad);border-radius:10px;padding:12px 16px;margin:16px 0;font-size:13px">
+    <strong>部署形态变更（2026-08-21）：</strong>本报告撰写时的「服务部署」形态（FastAPI / Streamlit / Docker）已按产品决策<strong>正式退役并删除</strong>。下方清单第 5–10 项（API/UI）与第 17 项（Docker）描述的是已移除的配置，仅供历史追溯；当前部署模型为<strong>桌面端唯一交付（规划中）+ CLI 无界面入口</strong>。引擎与测试（第 1–4、11–16 项）不受影响，仍可复现。
+  </div>
+
+  <div class="verdict">
+    <span class="badge ready">基本就绪 · 有条件发布</span>
+    <div>
+      <div><strong>16 项验证通过，1 项未能在本环境执行（Docker 构建）。</strong></div>
+      <div class="sub">代码、三入口功能、配置/环境变量、安全控制均通过实测；唯一缺口为 Docker 镜像构建与容器运行，因本沙箱无 Docker 引擎，需在目标部署环境补充验证。</div>
+    </div>
+  </div>
+
+  <h2>一、验证清单总览</h2>
+  <table>
+    <thead><tr><th style="width:34px">#</th><th>验证项</th><th>验证方法（实测）</th><th>关键证据</th><th style="width:70px">结果</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>安装可复现</td><td><code>pip install -e .</code></td><td>exit 0，生成 <code>lictracer-0.1.0</code> editable wheel</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>2</td><td>模块导入完整性</td><td>顺序 import 全部 17 个 <code>src.*</code> 模块</td><td>17/17 导入成功，无 ImportError</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>3</td><td>单元测试套件</td><td><code>pytest -q</code>（fresh run）</td><td><strong>40 passed in 1.61s</strong>，exit 0</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>4</td><td>CLI 入口</td><td><code>lictracer analyze sample.py --format json</code></td><td>exit 0；<code>methodology={tree_sitter:available, retriever_mode:full, kb_files:2}</code>；结论 INCOMPATIBLE/HIGH</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>5</td><td>API · 健康检查</td><td><code>GET /health</code></td><td><code>{status:ok, retriever_ready:true, retriever_mode:full, kb_files:2}</code></td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>6</td><td>API · 分析</td><td><code>POST /analyze</code>（sample.py）</td><td>HTTP 200；结论 INCOMPATIBLE/HIGH；片段 requests/MIT、finance-lib/GPL-3.0</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>7</td><td>API · 输入校验</td><td>上传非 <code>.py</code> 文件</td><td>HTTP <strong>400</strong>（仅支持 .py）</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>8</td><td>API · 鉴权</td><td>设 <code>LICT_API_TOKEN</code> 后分别无/错/对 token 请求</td><td>无 token→401，错 token→401，正确 token→200</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>9</td><td>UI 启动</td><td><code>streamlit run ui/app.py</code> + 健康检查</td><td><code>/_stcore/health</code> → <code>ok</code> (200)；根页 200</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>10</td><td>UI 后端一致性</td><td>直接调用 UI 所用的 <code>analyze_file</code></td><td>INCOMPATIBLE/HIGH，与 CLI/API 同源函数</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>11</td><td>配置加载</td><td><code>yaml.safe_load</code> settings/license_rules</td><td>字段齐全；copyleft 规则 4 条</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>12</td><td>环境变量接线</td><td>设 <code>LICT_*</code> 后导入模块校验常量</td><td>MIN_SIM=0.7、FUNC_ONLY=False、MAX_UPLOAD=1048576、TOKEN 生效</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>13</td><td>LLM 默认关闭</td><td>缺省 <code>LICT_ENABLE_LLM</code> 路径 + 脱敏</td><td>默认走本地模板不外发；脱敏后来源→「来源1」</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>14</td><td>缓存防投毒</td><td>检查磁盘缓存 + 代码逻辑</td><td>磁盘仅 <code>feature_index.json</code>、无 .pkl；代码删除 legacy pkl + datasketch 版本指纹</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>15</td><td>无 sys.path 注入</td><td><code>grep sys.path.insert/append</code></td><td>src 全程 0 处（可复现性加固已落地）</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>16</td><td>三入口结论一致</td><td>CLI / API / UI 同输入比对</td><td>三者均 INCOMPATIBLE/HIGH，片段完全一致</td><td><span class="tag p">PASS</span></td></tr>
+      <tr><td>17</td><td>Docker 构建/运行</td><td><code>docker build</code> / <code>docker compose</code></td><td><span class="bad">本沙箱无 docker CLI，未执行构建</span>；构建文件已审查</td><td><span class="tag w">GAP</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>二、关键证据摘录</h2>
+
+  <div class="card">
+    <h3>2.1 测试套件（40 passed）</h3>
+    <p class="sub">覆盖：预处理（AST 归一化）、溯源召回（多特征 MinHash 相似召回 / 全库确定性扫描 / JSON 缓存）、知识库校验、复合许可证 OR/AND、证据精炼（redup 缓存）、合规推理、聚合、端到端冒烟。</p>
+    <pre>........................................  [100%]
+40 passed in 1.61s</pre>
+    <p class="note">说明：首次运行因沙箱「批量删除安全门」在 pytest 临时目录清理阶段拦截（删除文件数 ≥ 50 触发确认），导致退出码为 1 但测试实际全部通过；改用独立 basetemp + 保留临时文件后复跑，退出码 0、40 passed 为真实结果。该现象为环境产物，非产品缺陷。</p>
+  </div>
+
+  <div class="card">
+    <h3>2.2 三入口一致性与合规结论</h3>
+    <table>
+      <thead><tr><th>入口</th><th>调用</th><th>结论</th><th>风险</th><th>片段（来源 / 许可证 / 相似度）</th></tr></thead>
+      <tbody>
+        <tr><td>CLI</td><td><code>lictracer analyze sample.py</code></td><td>INCOMPATIBLE</td><td>HIGH</td><td>requests/MIT/1.0 · finance-lib/GPL-3.0/1.0</td></tr>
+        <tr><td>API</td><td><code>POST /analyze</code></td><td>INCOMPATIBLE</td><td>HIGH</td><td>requests/MIT/1.0 · finance-lib/GPL-3.0/1.0</td></tr>
+        <tr><td>UI</td><td><code>analyze_file(sample.py)</code></td><td>INCOMPATIBLE</td><td>HIGH</td><td>requests/MIT/1.0 · finance-lib/GPL-3.0/1.0</td></tr>
+      </tbody>
+    </table>
+    <p class="note">三入口后端均收敛于同一 <code>src.pipeline.analyze_file</code>，结论与片段完全一致；<code>methodology</code> 字段在 CLI/API 报告中均正确暴露（tree_sitter 状态、检索模式、KB 文件数），降级路径可观测。</p>
+  </div>
+
+  <div class="card">
+    <h3>2.3 安全控制实测</h3>
+    <ul>
+      <li><strong>上传大小上限</strong>：默认 5 MB（<code>LICT_MAX_UPLOAD_BYTES</code>），读取截断至 <code>MAX+1</code> 字节并返 413；已验证环境变量接线（设为 1048576 后常量生效）。</li>
+      <li><strong>可选 Bearer 鉴权</strong>：<code>LICT_API_TOKEN</code> 未设→匿名可访问（本地/内网）；设置后无/错 token→<strong>401</strong>，正确 token→<strong>200</strong>。</li>
+      <li><strong>后缀白名单</strong>：非 <code>.py</code> 上传→<strong>400</strong>。</li>
+      <li><strong>LLM 默认关闭</strong>：未显式 <code>LICT_ENABLE_LLM=1</code> 时不调用任何第三方 API，仅本地模板；<code>LICT_LLM_MASK_SOURCE=1</code> 可脱敏来源。</li>
+      <li><strong>缓存防投毒</strong>：索引缓存为 JSON（<code>hashvalues</code> 数组），含 <code>datasketch_version</code> 指纹；启动自动删除 legacy <code>.pkl</code>；磁盘实测无 .pkl。</li>
+      <li><strong>最小权限</strong>：Dockerfile 以非 root <code>appuser</code>（uid 10001）运行。</li>
+      <li><strong>无 sys.path hack</strong>：全仓 grep 0 处，安装可复现性已落地。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2.4 配置与环境变量接线（实测覆盖）</h3>
+    <pre>settings.yaml      → project_license=MIT, top_k=10, knowledge_base_path, rules_config_path, link_type, log_level
+license_rules.yaml  → 4 条 copyleft 规则 (GPL-*/AGPL-*/LGPL-*)
+LICT_REDUP_MIN_SIM=0.7        → _MIN_SIMILARITY=0.7   ✓
+LICT_REDUP_FUNCTIONS_ONLY=0   → _FUNCTIONS_ONLY=False  ✓
+LICT_MAX_UPLOAD_BYTES=1048576 → MAX_UPLOAD_BYTES=1048576 ✓
+LICT_API_TOKEN=sekret        → API_TOKEN 生效(401/200) ✓
+LICT_LLM_MASK_SOURCE=1        → 来源脱敏为「来源1」       ✓</pre>
+  </div>
+
+  <h2>三、与评估报告四大硬伤的对应状态</h2>
+  <table>
+    <thead><tr><th>原评估硬伤</th><th>本轮状态</th><th>证据 / 说明</th></tr></thead>
+    <tbody>
+      <tr><td>① 缺评估体系（无召回率/精度量化）</td><td><span class="tag w">未处理</span></td><td>按用户范围约定，指标计算与基线对比留待核心系统完善后补充；属已知范围外项。</td></tr>
+      <tr><td>② LSH Forest 召回率 &lt;100% 与「绝不漏报」矛盾</td><td><span class="tag p">已解决</span></td><td>Forest 已于 2026-08-23 移除，溯源召回改为<b>全库确定性 Jaccard 扫描</b>（非近似，召回确定性 100%）；本系统 KB 为提取实体集 O(百) 文件，全库扫描毫秒级（代码 + 单测覆盖）。</td></tr>
+      <tr><td>③ 仅支持 Python 单语言</td><td><span class="tag w">未处理</span></td><td>按用户范围约定，多语言扩展留待后续；属已知范围外项。</td></tr>
+      <tr><td>④ 可复现/分发脆弱（sys.path×4、无 pyproject、静默 except）</td><td><span class="tag p">已修复</span></td><td>PEP 621 <code>pyproject.toml</code> + <code>pip install -e .</code>；全仓 0 处 sys.path 注入；加载失败显式 WARNING（methodology 字段可见）。</td></tr>
+    </tbody>
+  </table>
+
+  <h2>四、未验证项与风险（诚实声明）</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>高风险 / 须补验</h3>
+      <ul>
+        <li><strong>Docker 镜像构建与容器运行</strong>：本沙箱无 docker 引擎，未能执行 <code>docker compose build</code> 与启动冒烟。Dockerfile 两阶段构建、<code>--no-deps -e .</code>、非 root、<code>mem_limit</code>、<code>--workers 1</code>、healthcheck、回环地址绑定均已审查，但<strong>需在目标部署环境实跑确认</strong>。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>中风险 / 已知局限</h3>
+      <ul>
+        <li><strong>大规模 KB 性能（诚实边界）</strong>：Forest 已于 2026-08-23 移除，溯源改为<b>全库确定性 Jaccard 扫描</b>（召回确定性 100%，KB O(百) 文件实测毫秒级）；遗留边界为全库扫描常数开销随 KB 文件数 N 线性增长，≥2000 文件整库代价仍待实证。</li>
+        <li><strong>上传上限行为化测试</strong>：大小限制逻辑与 env 接线已验证，但未用真实 &gt;5MB 文件触发 413（低风险）。</li>
+        <li><strong>并发安全</strong>：tree-sitter <code>threading.local</code> 解析器隔离已在前期 8 线程验证；本轮未复跑，但代码与单测保持。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>五、发布建议</h2>
+  <div class="card">
+    <p><strong>结论：系统已具备发布条件，建议以「v0.1.0 候选」推进部署，但须先完成下方“部署前必做”。</strong></p>
+    <ul>
+      <li><strong>部署前必做（阻塞项）</strong>：在目标环境执行 <code>docker compose build</code> 与启动冒烟（<code>/health</code> 应返回 <code>retriever_ready:true</code>），确认镜像可构建、容器以非 root 启动、端口仅绑回环。</li>
+      <li><strong>部署前建议</strong>：以 ≥2000 文件的知识库跑一次端到端，验证 Forest 路径与兜底；按需设置 <code>LICT_API_TOKEN</code> 开启鉴权；如启用 LLM 摘要，显式设 <code>LICT_ENABLE_LLM=1</code> 并评估 <code>LICT_LLM_MASK_SOURCE</code>。</li>
+      <li><strong>论文层面待补（用户约定范围外）</strong>：评估 harness（召回率/精度量化）、多语言扩展；这两项为已知局限，应在论文“未来工作/局限性”中如实说明。</li>
+    </ul>
+  </div>
+
+  <h2>六、验证方法说明</h2>
+  <div class="card">
+    <ul>
+      <li>所有结论均来自本环境<strong>本轮实际执行</strong>的命令输出（非历史结果引用）。</li>
+      <li>运行时：Windows + Python 3.13（项目 venv，<code>pip install -e .</code>）。注：原 Docker 目标镜像 <code>python:3.12-slim</code> 随服务部署退役已不再使用。</li>
+      <li>三入口均使用同一 <code>sample.py</code>（含 requests 风格片段与 GPL-3.0 风格片段）作为输入。</li>
+      <li>测试复跑因沙箱批量删除安全门干扰，已通过独立 basetemp 规避，最终 <code>40 passed / exit 0</code> 为干净结果。</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    生成于 LicTracer 发布前验证流程 · 证据可复现：<code>pip install -e . &amp;&amp; pytest -q</code> · <code>lictracer analyze sample.py</code>。
+    <br>注：原 FastAPI / Streamlit / Docker 服务部署入口已退役（见上方部署形态变更说明），相关命令不再适用。
+  </div>
+</div>
+</body>
+</html>

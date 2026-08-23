@@ -1,0 +1,57 @@
+# LicTracer CI —— 双通道设计（与 pytest slow 标记配套）：
+#   fast（push / PR）：ruff 静态检查 + pip-audit 依赖漏洞扫描 + 默认测试（排除基准级 slow 测试）
+#   full（夜间 / 手动）：全量回归（含三大基准重建，分钟级；真实语料基准需额外安装 KB 源码包）
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 18 * * *" # UTC 18:00 = 北京时间次日凌晨 02:00，夜间全量回归
+  workflow_dispatch:
+
+jobs:
+  fast:
+    name: lint + audit + fast-tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install project + dev tools
+        run: pip install -e ".[dev]"
+      - name: Ruff (static checks)
+        run: ruff check .
+      - name: pip-audit (known dependency vulnerabilities)
+        run: |
+          pip install pip-audit
+          pip-audit --skip-editable
+      - name: Fast tests (benchmark-level slow tests excluded)
+        run: pytest -m "not slow" -q
+
+  full:
+    name: full regression (incl. benchmarks)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install project (+ real-corpus KB source packages)
+        run: |
+          pip install -e ".[dev]"
+          # evaluation/real_corpus.py 从已安装的真实开源包提取 KB 实体，
+          # 其中 pandas / charset-normalizer 不是项目依赖，须显式安装
+          pip install pandas charset-normalizer
+      - name: Full test suite (all benchmarks)
+        run: pytest -m "" -q

@@ -1,0 +1,31 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# 环境变量
+.env
+
+# 运行期产物
+reports/
+
+# 生成的检索索引（可由 KB 全量重建）
+data/**/.index/
+.pytest_tmp/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 本地工具链（AI 协作/索引，不入库）
+.workbuddy/
+.omo/
+.trae/
+.codegraph/

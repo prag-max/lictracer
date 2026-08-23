@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LicTracer 技术栈选型评估报告</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){mermaid.initialize({startOnLoad:true,theme:"default"});});</script>
+<style>
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .sev-H{background:#dc2626;color:#fff}.sev-M{background:#d97706;color:#fff}.sev-L{background:#0891b2;color:#fff}
+  .badge{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:12px;font-weight:600}
+  .card{border-left:4px solid #cbd5e1}
+  table{border-collapse:collapse;font-size:13px}
+  th,td{border:1px solid #e2e8f0;padding:6px 9px}
+  th{background:#f1f5f9}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+<div class="max-w-5xl mx-auto px-6 py-8">
+
+  <header class="mb-8 border-b pb-5">
+    <h1 class="text-3xl font-bold text-slate-900">LicTracer 技术栈选型评估报告</h1>
+    <p class="mt-2 text-slate-500">面向 AI 生成代码的许可证合规审计系统 · 组件级不足、风险与落地改进建议</p>
+    <p class="mt-1 text-xs text-slate-400">评估基线：源码快照 2026-08-21 · 当前知识库规模 2 项目 / 2 文件 · 测试 26 passed</p>
+  </header>
+
+  <!-- 执行摘要 -->
+  <section class="mb-10">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">一、执行摘要</h2>
+    <div class="bg-white rounded-lg shadow p-5 card">
+      <p class="mb-3">技术栈整体选型<b class="text-slate-900">合理、务实</b>：FastAPI + Streamlit + tree-sitter + datasketch + redup + osadl-matrix + license-expression 的组合覆盖了一条完整的「预处理→溯源召回→证据精炼→聚合→合规推理→报告」流水线，且已做安全加固（上传限流、可选鉴权、非 root、LLM 默认关闭）。但作为<b class="text-slate-900">毕业设计 / 学术论文</b>成果，存在 4 类<b class="text-red-600">论文级硬伤</b>必须先解决：</p>
+      <ol class="list-decimal pl-6 space-y-2 text-sm">
+        <li><b>评估体系缺失（最高优先级）</b>：无任何召回率/精确率指标、无标注克隆数据集、无与 SourcererCC/JPlag/CCFinder 等基线的量化对比，方法「有效性」缺乏证据。</li>
+        <li><b>LSH Forest 召回率 &lt; 100% 与「绝不漏报」声明矛盾（已解决）</b>：原自适应混合的 Forest 候选生成基于 LSH 分桶，天然会丢失部分真实近邻，直接冲击合规安全假设；已于 2026-08-23 移除 Forest，溯源改为<b>全库确定性 Jaccard 扫描</b>（召回确定性 100%），该硬伤消除。</li>
+        <li><b>仅支持 Python（tree-sitter-python 单一语言，KB 仅扫 .py）</b>：对「AI 生成代码」多语言现实构成范围性硬伤。</li>
+        <li><b>可复现/分发脆弱</b>：4 处 <code>sys.path.insert</code> 导入 hack、无 <code>pyproject.toml</code>、依赖无哈希锁；且多处 <code>try/except</code> 静默降级削弱了「零幻觉 / 可复现」声明的可信度。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 风险热力 -->
+  <section class="mb-10">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">二、组件风险总览</h2>
+    <div class="overflow-x-auto bg-white rounded-lg shadow p-4">
+      <table class="w-full">
+        <thead><tr><th>组件</th><th>角色</th><th>主要风险</th><th>严重度</th></tr></thead>
+        <tbody>
+          <tr><td>评估/测试体系</td><td>质量与论文证据</td><td>无指标/无基线对比/无 CI</td><td><span class="badge sev-H">高</span></td></tr>
+          <tr><td>datasketch（Forest）</td><td>粗筛召回</td><td>LSH 召回&lt;100%、similarity 为估计值、未大规模验证</td><td><span class="badge sev-H">高</span></td></tr>
+          <tr><td>tree-sitter-python</td><td>AST/子树特征</td><td>仅 Python、版本浮动、静默降级</td><td><span class="badge sev-H">高</span></td></tr>
+          <tr><td>打包与导入</td><td>可安装/可复现</td><td>sys.path hack×4、无 pyproject、无锁文件</td><td><span class="badge sev-H">高</span></td></tr>
+          <tr><td>redup</td><td>行级证据</td><td>functions_only 漏证据、黑盒阈值、每次重建</td><td><span class="badge sev-M">中</span></td></tr>
+          <tr><td>license-expression</td><td>SPDX 归一化</td><td>复合表达式未拆分→误判 UNKNOWN</td><td><span class="badge sev-M">中</span></td></tr>
+          <tr><td>FastAPI/uvicorn</td><td>API 服务</td><td>懒加载首请求阻塞、全局状态、parser 非线程安全</td><td><span class="badge sev-M">中</span></td></tr>
+          <tr><td>Streamlit UI</td><td>交互界面</td><td>重复入口、无鉴权、导入 hack</td><td><span class="badge sev-M">中</span></td></tr>
+          <tr><td>osadl-matrix</td><td>兼容矩阵</td><td>2024 快照陈旧、单一数据源</td><td><span class="badge sev-L">低</span></td></tr>
+          <tr><td>LLM 摘要</td><td>NL 摘要</td><td>无 SDK/重试/脱敏审计（默认关闭）</td><td><span class="badge sev-L">低</span></td></tr>
+          <tr><td>Docker Compose</td><td>部署</td><td>无资源限制/镜像扫描/索引预热</td><td><span class="badge sev-L">低</span></td></tr>
+          <tr><td>知识库</td><td>基准数据</td><td>仅 2 文件、licenses.json 无校验</td><td><span class="badge sev-M">中</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 当前架构 -->
+  <section class="mb-10">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">三、当前数据流与风险点</h2>
+    <div class="bg-white rounded-lg shadow p-5">
+      <div class="mermaid">
+graph LR
+  U[用户 .py] --> API[FastAPI / Streamlit]
+  API --> PRE[预处理<br/>tree-sitter 归一化]
+  PRE --> REC[粗筛召回<br/>datasketch MinHash+Winnowing+AST]
+  REC --> EVI[证据精炼<br/>redup 行级]
+  EVI --> AGG[聚合<br/>行号聚类]
+  AGG --> COMP[合规推理<br/>OSADL+Copyleft]
+  COMP --> REP[报告+LLM摘要]
+  KB[(知识库 .py<br/>仅 Python)] -.特征索引.-> REC
+  classDef risk fill:#fee2e2,stroke:#dc2626;
+  REC:::risk
+  PRE:::risk
+      </div>
+      <p class="text-xs text-slate-500 mt-3">红色节点为「仅 Python / LSH 召回不确定」两类核心风险所在：预处理与粗筛召回都强依赖 tree-sitter-python 与 datasketch 的 LSH 行为。</p>
+    </div>
+  </section>
+
+  <!-- 组件详评 -->
+  <section class="mb-10">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">四、组件级详评与改进建议</h2>
+
+    <!-- datasketch -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.1 datasketch（MinHash / LSHForest）—— 粗筛召回</h3>
+        <span class="badge sev-H">高</span>
+      </div>
+      <p class="text-sm"><b>现状：</b>多特征（运算符感知分词 + Winnowing 指纹 + AST 子树哈希）→MinHash(seed=1)→全库确定性 Jaccard 扫描（O(N×num_perm) 整数级比较，召回确定性 100%）。纯 Python、可缓存、无硬阈值候选。<b>2026-08-23 更新：</b>原 Forest（≥2000 文件近似候选）分支已移除——KB 为提取实体集 O(百) 文件，全库扫描毫秒级，Forest 亚线性代价无收益（crossover≈N≥20000），故仅保留 full 路径，<b>关键风险 1 的漏报隐患随之消除</b>。</p>
+      <p class="text-sm mt-2 text-red-700"><b>⚠ 关键风险 1 — LSH 召回率 &lt; 100%：</b>Forest <code>query()</code> 基于 LSH 分桶，天然会漏掉部分真实近邻；即便「无硬阈值」，分桶冲突仍可能使真正的 Top-1 克隆未进入候选集，导致<b>漏报</b>，直接冲击「高召回、绝不漏报」的合规安全假设。模块注释称「避免合规致命的漏报」在技术上不成立。</p>
+      <p class="text-sm mt-2 text-red-700"><b>关键风险 2 — similarity 为估计值：</b>num_perm=128 时 Jaccard 估计标准误 ≈ ±7.4%；单个 <code>similarity</code> 仅应作为排序信号，不可解读为精确相似度（论文表述须谨慎）。</p>
+      <p class="text-sm mt-2 text-red-700"><b>关键风险 3 — 未大规模验证：</b>crossover=2000 为经验值，当前 KB 仅 2 文件，Forest/自适应路径<b>完全未经真实规模标定</b>，论文「大规模 KB」结论缺支撑。缓存 pickle 未含 datasketch 版本指纹；N 个文件全量驻留内存（100k≈100MB+）。</p>
+      <p class="text-sm mt-2"><b>建议：</b>① 在标注克隆集上测 Forest 召回@K，必要时退回全扫描或提升 num_perm / 多重探测；② 论文明确「similarity 为 MinHash 估计值」；③ 对 KB 规模做基准测试并据此调参；④ 缓存增加 datasketch 版本字段；⑤ 大 KB 考虑外部存储/分片。</p>
+    </div>
+
+    <!-- tree-sitter -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.2 tree-sitter 0.26.0 + tree-sitter-python —— AST 解析</h3>
+        <span class="badge sev-H">高</span>
+      </div>
+      <p class="text-sm"><b>现状：</b>预处理归一化 + G 子树哈希；字节偏移防中文错位、递归保护、失败降级正则。</p>
+      <p class="text-sm mt-2 text-red-700"><b>风险 1 — 仅支持 Python：</b>单一语言，KB 只扫 <code>.py</code>。对「AI 生成代码」多语言现实（JS/TS/Go/Java/C++）构成<b>范围性硬伤</b>。</p>
+      <p class="text-sm mt-2"><b>风险 2 — 版本浮动：</b><code>tree-sitter-python&gt;=0.21.0</code> 未锁上界，未来版本可能改 <code>language()</code>/节点 API，导致静默降级或崩溃，应锁 <code>==</code>。</p>
+      <p class="text-sm mt-2"><b>风险 3 — 静默降级：</b>各模块 <code>try/except</code> 独立加载 parser，失败即回退正则且<b>无声</b>，结果可能悄然改变——削弱「可复现/零幻觉」声明。同时 <code>tree_sitter.Parser</code> 非线程安全，并发解析有数据竞争。</p>
+      <p class="text-sm mt-2"><b>建议：</b>锁 <code>tree-sitter-python==&lt;ver&gt;</code>；多语言需引入对应 grammar 并按扩展名路由；parser 加载失败改为<b>启动期 fail-fast</b>或结构化计入报告方法学声明；用 <code>threading.local</code>/锁做 parser 线程隔离。</p>
+    </div>
+
+    <!-- 打包 -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.3 打包与导入机制（无 pyproject / sys.path hack）</h3>
+        <span class="badge sev-H">高</span>
+      </div>
+      <p class="text-sm"><b>现状：</b>4 处 <code>sys.path.insert(0, 项目根)</code>（routes.py:12、cli/main.py:9、ui/app.py:11、conftest.py:6）；无 <code>pyproject.toml</code>/<code>setup.py</code>，<code>src</code> 不是可安装包；依赖无哈希锁。</p>
+      <p class="text-sm mt-2"><b>风险：</b>无法 <code>pip install -e .</code> 或作为库复用；Docker 靠 cwd 隐含导入；跨环境/CI 易 <code>ModuleNotFoundError</code>；供应链可复现性弱。直接削弱论文 reproducibility。</p>
+      <p class="text-sm mt-2"><b>建议（P1）：</b>加 <code>pyproject.toml</code>（<code>[project]</code>+ 将 <code>src</code> 设为 package），移除全部 sys.path hack；用 <code>uv</code>/<code>pip-tools</code> 生成哈希锁 <code>requirements.lock</code>；CI 跑 pytest + 构建校验。</p>
+    </div>
+
+    <!-- redup -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.4 redup 0.4.46 —— 证据精炼</h3>
+        <span class="badge sev-M">中</span>
+      </div>
+      <p class="text-sm"><b>现状：</b><code>compare_projects(..., functions_only=True, similarity_threshold=0.5)</code> 给出行级证据，兜底过滤 LSH 噪声。</p>
+      <p class="text-sm mt-2 text-red-700"><b>风险 — functions_only 漏证据：</b>仅比对函数级匹配；若克隆出现在模块级语句、类属性、或非函数结构文件，redup 可能返回空→<b>证据层漏报</b>。相似度 0.5 口径未文档化，与 MinHash 估计值是两套度量。</p>
+      <p class="text-sm mt-2"><b>风险：</b>每次 <code>analyze_file</code> 新建临时目录、复制候选、调用 <code>compare_projects</code>（可能多进程），无结果缓存；小众库 API 稳定性需关注。</p>
+      <p class="text-sm mt-2"><b>建议：</b>评估 <code>functions_only</code> 对真实克隆形态的影响，必要时改文件级/块级比对；加调用缓存；论文把 redup 明确为「精排 oracle」并给出其局限与两套相似度的关系。</p>
+    </div>
+
+    <!-- license-expression -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.5 license-expression —— SPDX 归一化</h3>
+        <span class="badge sev-M">中</span>
+      </div>
+      <p class="text-sm"><b>现状：</b>标准库，处理表达式、<code>+</code>→or-later、裸 GPL→only。</p>
+      <p class="text-sm mt-2 text-red-700"><b>风险 — 复合表达式未拆分：</b><code>MIT OR GPL-3.0</code>、<code>Apache-2.0 AND BSD-3-Clause</code> 归一化后整体传给 OSADL，OSADL 通常只接受单一标识→抛异常/降级 UNKNOWN。多许可证片段会被错判为「需复核」或漏兼容。仅做极少映射，未校验标识合法性。</p>
+      <p class="text-sm mt-2"><b>建议：</b>对 OR/AND 表达式<b>拆分后逐成分判定并取最严格</b>（保守：任一成分不兼容即 INCOMPATIBLE）；或显式标记「复合许可证」给保守结论；增加标识合法性校验与告警。</p>
+    </div>
+
+    <!-- FastAPI -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.6 FastAPI / uvicorn —— API 服务</h3>
+        <span class="badge sev-M">中</span>
+      </div>
+      <p class="text-sm"><b>优势：</b>上传限流、可选 Bearer 鉴权、异常脱敏、healthcheck 完善。</p>
+      <p class="text-sm mt-2"><b>风险：</b>同步 <code>def analyze</code> 跑在线程池，首个请求触发 KB 索引构建（数百 ms~数 s）长期占线程；<code>_RETRIEVER_CACHE</code> 进程内全局、多 worker 各自重建（内存×N）；共享 <code>_TS_PARSER</code> 并发解析有竞争；API 有鉴权而 UI 无，部署到服务器即暴露。</p>
+      <p class="text-sm mt-2"><b>建议：</b>检索器/KB 加载移至 lifespan startup 预热（非懒加载首请求）；parser 线程隔离；多 worker 共享索引或 <code>--workers 1</code>；UI 经反代统一鉴权。</p>
+    </div>
+
+    <!-- Streamlit -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.7 Streamlit UI</h3>
+        <span class="badge sev-M">中</span>
+      </div>
+      <p class="text-sm"><b>风险：</b>重复 import pipeline 实现分析入口（与 API 双入口，seam 不统一，改动易遗漏）；无鉴权/输入校验；导入 hack；与 API 配置可能漂移。</p>
+      <p class="text-sm mt-2"><b>建议：</b>UI 改为调用本地 API（localhost:8000）而非重复 import，统一入口；或借 4.3 把 <code>src</code> 装为包消除 hack。</p>
+    </div>
+
+    <!-- osadl / llm / docker / kb -->
+    <div class="bg-white rounded-lg shadow p-5 mb-4 card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-bold text-slate-900">4.8 osadl-matrix / 4.9 LLM 摘要 / 4.10 Docker / 4.11 知识库</h3>
+        <span class="badge sev-L">低/中</span>
+      </div>
+      <ul class="text-sm list-disc pl-6 space-y-1">
+        <li><b>osadl-matrix</b>（低）：权威但固定 2024.5.22 快照，新许可证不更新；论文须标注数据时效与覆盖率；可选接入 SPDX license list 做补充识别。</li>
+        <li><b>LLM 摘要</b>（低）：默认关闭、仅转述、失败回退，方向正确；但无 SDK/重试/超时可配/脱敏审计。建议 SDK 化 + 指数退避 + 发送前最小字段脱敏 + 审计日志。</li>
+        <li><b>Docker</b>（低）：非 root/localhost 暴露好；缺资源限制（大 KB 索引可能 OOM）、镜像漏洞扫描、索引预热 healthcheck。建议加 mem_limit、CI 构建+扫描、startup 预热。</li>
+        <li><b>知识库</b>（中）：<b>仅 2 项目 2 文件</b>，系统从未真实规模验证；<code>licenses.json</code> 手工维护无校验（拼错→UNKNOWN）；pickle 缓存本地但若挂载不可信卷有投毒风险。建议构建千~万级真实 KB 用于评估 + schema 校验 + 缓存权限收紧。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 横切 -->
+  <section class="mb-10">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">五、横切性风险</h2>
+    <div class="bg-white rounded-lg shadow p-5 space-y-3 text-sm">
+      <p><b>① 并发安全：</b><code>_TS_PARSER</code> 非线程安全、<code>_RETRIEVER_CACHE</code> 全局可变——高并发下存在数据竞争与重复构建。优先 parser 线程隔离 + startup 预热。</p>
+      <p><b>② 确定性 vs 静默降级的矛盾：</b>大量 <code>try/except Exception</code> 兜底（tree-sitter→正则、OSADL→UNKNOWN、license-expression→原文、LLM→模板）提升鲁棒性，但也让失败「无声改变结果」，与「可复现/零幻觉」声明张力明显。建议失败可见化（计入报告方法学字段）或 fail-fast。</p>
+      <p><b>③ 多语言缺失：</b>整条流水线（KB 扫描、AST 归一化、G 特征）都假设 Python，是范围硬伤，论文须诚实界定适用边界。</p>
+      <p><b>④ 评估缺失：</b>无指标、无标注集、无基线——是论文「方法有效性」论证的最大短板，见路线图 P0。</p>
+    </div>
+  </section>
+
+  <!-- 路线图 -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-3 text-slate-900">六、优先级路线图</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+        <h3 class="font-bold text-red-700 mb-2">P0 · 论文阻塞</h3>
+        <ul class="text-sm list-disc pl-5 space-y-1">
+          <li>建立评估 harness：标注克隆集（T1–T4）+ 召回/精确率/F1 + 与 SourcererCC/JPlag 对比</li>
+          <li>量化 Forest 召回率并补召回兜底（全扫描/多重探测）</li>
+          <li>构建真实规模 KB（千~万级文件）用于基准</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+        <h3 class="font-bold text-amber-700 mb-2">P1 · 正确性/可复现</h3>
+        <ul class="text-sm list-disc pl-5 space-y-1">
+          <li>pyproject.toml + 去 sys.path hack + 哈希锁</li>
+          <li>多语言 parser 路由</li>
+          <li>复合许可证拆分（取最严格）</li>
+          <li>并发 parser 隔离 + startup 预热</li>
+        </ul>
+      </div>
+      <div class="bg-cyan-50 rounded-lg p-4 border border-cyan-200">
+        <h3 class="font-bold text-cyan-700 mb-2">P2 · 工程加固</h3>
+        <ul class="text-sm list-disc pl-5 space-y-1">
+          <li>LLM SDK 化 + 脱敏审计</li>
+          <li>Docker 资源限制 + 镜像扫描 + CI</li>
+          <li>licenses.json 校验 + 缓存权限</li>
+          <li>redup functions_only 评估 + 调用缓存</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-xs text-slate-400 border-t pt-4">
+    本报告基于源码静态审查与依赖清单，结论用于指导毕设/论文改进；量化指标（召回率、规模基准）需以真实评估 harness 实测补充。
+  </footer>
+</div>
+</body>
+</html>

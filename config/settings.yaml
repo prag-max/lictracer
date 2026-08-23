@@ -1,0 +1,14 @@
+# 系统配置（项目整体许可证默认 MIT、知识库路径、报告路径等）
+project_license: MIT          # 待审计项目的整体许可证
+knowledge_base_path: data/knowledge_base   # 知识库根目录（相对项目根）
+rules_config_path: config/license_rules.yaml  # Copyleft 策略配置
+top_k: 10                     # 溯源召回候选数
+
+# 确定性等价验证（替代旧 e2e_clone_threshold 0.30 结构兜底，决策路径无浮点阈值）：
+#   L1 规范型精确相等（逐字/重命名 T1/T2）→ L2 函数体规范语句序列包含（T3）→
+#   L3 锚点行游程（≥ min_anchor_lines 行连续规范化行命中）。
+# min_anchor_lines 是策略定义「多长算一份拷贝」（非相似度阈值），L3 仅为召回闸门，
+# 精确裁决由 L1/L2 布尔判定完成；默认 3 行过包含由验证器剪枝。
+min_anchor_lines: 3
+link_type: dynamic            # Copyleft 链接方式（static/dynamic），用于传染判断描述
+log_level: INFO

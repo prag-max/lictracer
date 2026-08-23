@@ -1,0 +1,13 @@
+{
+  "click": "BSD-3-Clause",
+  "datasketch": "MIT",
+  "license_expression": "Apache-2.0",
+  "charset_normalizer": "MIT",
+  "numpy": "BSD-3-Clause",
+  "pandas": "BSD-3-Clause",
+  "altair": "BSD-3-Clause",
+  "scipy": "BSD-3-Clause",
+  "beancount": "GPL-2.0",
+  "telegram": "LGPL-3.0",
+  "mozinfo": "MPL-2.0"
+}

@@ -1,0 +1,5013 @@
+[
+  {
+    "id": "q001_exact_click_isolation.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q002_renamed_click_isolation.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q003_transformed_click_isolation.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q004_deleted_click_isolation.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q005_reordered_click_isolation.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q006_exact_click_open_stream.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.1953
+      }
+    ]
+  },
+  {
+    "id": "q007_transformed_click_open_stream.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.2188
+      }
+    ]
+  },
+  {
+    "id": "q008_deleted_click_open_stream.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.1953
+      }
+    ]
+  },
+  {
+    "id": "q009_reordered_click_open_stream.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.1953
+      }
+    ]
+  },
+  {
+    "id": "q014_exact_click_style.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1953
+      }
+    ]
+  },
+  {
+    "id": "q015_transformed_click_style.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1797
+      }
+    ]
+  },
+  {
+    "id": "q016_deleted_click_style.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1953
+      }
+    ]
+  },
+  {
+    "id": "q017_reordered_click_style.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2031
+      }
+    ]
+  },
+  {
+    "id": "q023_exact_click_wrap_text.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      }
+    ]
+  },
+  {
+    "id": "q024_renamed_click_wrap_text.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      }
+    ]
+  },
+  {
+    "id": "q025_transformed_click_wrap_text.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1797
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1562
+      }
+    ]
+  },
+  {
+    "id": "q026_deleted_click_wrap_text.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1797
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1797
+      }
+    ]
+  },
+  {
+    "id": "q027_reordered_click_wrap_text.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1797
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      }
+    ]
+  },
+  {
+    "id": "q037_exact_click_progressbar.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click",
+      "click",
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q038_transformed_click_progressbar.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q039_class_attr_click_progressbar.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click",
+      "click",
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q040_exact_click_helpformatter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1797
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q041_transformed_click_helpformatter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q042_class_attr_click_helpformatter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q043_exact_click_lazyfile.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q044_transformed_click_lazyfile.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q045_class_attr_click_lazyfile.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "click",
+      "click"
+    ],
+    "excluded_weak": [
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q046_exact_datasketch_minhash_many.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q047_renamed_datasketch_minhash_many.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q048_transformed_datasketch_minhash_many.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q049_deleted_datasketch_minhash_many.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q051_exact_datasketch__compute_best_partitions.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.3047
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q052_renamed_datasketch__compute_best_partitions.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.3125
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q053_transformed_datasketch__compute_best_partitions.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.3281
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q054_deleted_datasketch__compute_best_partitions.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.3125
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q055_reordered_datasketch__compute_best_partitions.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.3125
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q066_exact_datasketch_jaccard.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q067_renamed_datasketch_jaccard.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q068_transformed_datasketch_jaccard.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q069_deleted_datasketch_jaccard.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q070_reordered_datasketch_jaccard.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q085_exact_datasketch_asyncminhashlsh.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q086_transformed_datasketch_asyncminhashlsh.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q087_class_attr_datasketch_asyncminhashlsh.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q088_exact_datasketch_minhash_2.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0234
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q089_transformed_datasketch_minhash_2.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0312
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q090_class_attr_datasketch_minhash_2.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "datasketch",
+      "datasketch",
+      "datasketch",
+      "datasketch"
+    ],
+    "excluded_weak": [
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0312
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q094_exact_license_expression_iter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.7812
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q095_renamed_license_expression_iter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.7266
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q096_transformed_license_expression_iter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.8047
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q097_deleted_license_expression_iter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.8125
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1797
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q098_reordered_license_expression_iter.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.7812
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1719
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q119_exact_license_expression_token.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression",
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q120_transformed_license_expression_token.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q121_class_attr_license_expression_token.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression",
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q122_exact_license_expression_trie.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.3906
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q123_transformed_license_expression_trie.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.3672
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q124_class_attr_license_expression_trie.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "license_expression",
+      "license_expression"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.3594
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q128_exact_charset_normalizer_cli_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q129_renamed_charset_normalizer_cli_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q130_transformed_charset_normalizer_cli_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q131_deleted_charset_normalizer_cli_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q132_reordered_charset_normalizer_cli_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q133_exact_charset_normalizer__character_flags.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q134_renamed_charset_normalizer__character_flags.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q135_transformed_charset_normalizer__character_flags.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q136_deleted_charset_normalizer__character_flags.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2188
+      }
+    ]
+  },
+  {
+    "id": "q137_reordered_charset_normalizer__character_flags.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2031
+      }
+    ]
+  },
+  {
+    "id": "q138_exact_charset_normalizer_characters_popularity_compare.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q139_renamed_charset_normalizer_characters_popularity_compare.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q141_deleted_charset_normalizer_characters_popularity_compare.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q142_reordered_charset_normalizer_characters_popularity_compare.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q143_exact_charset_normalizer_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2031
+      }
+    ]
+  },
+  {
+    "id": "q144_renamed_charset_normalizer_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q145_transformed_charset_normalizer_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q146_deleted_charset_normalizer_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q147_reordered_charset_normalizer_detect.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.2109
+      }
+    ]
+  },
+  {
+    "id": "q158_exact_charset_normalizer_alpha_unicode_split.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      }
+    ]
+  },
+  {
+    "id": "q159_renamed_charset_normalizer_alpha_unicode_split.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q160_transformed_charset_normalizer_alpha_unicode_split.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      }
+    ]
+  },
+  {
+    "id": "q161_deleted_charset_normalizer_alpha_unicode_split.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q162_reordered_charset_normalizer_alpha_unicode_split.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1484
+      }
+    ]
+  },
+  {
+    "id": "q168_exact_charset_normalizer_charsetmatch.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q169_transformed_charset_normalizer_charsetmatch.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q170_class_attr_charset_normalizer_charsetmatch.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q174_exact_charset_normalizer_filetype.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer",
+      "charset_normalizer",
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0391
+      }
+    ]
+  },
+  {
+    "id": "q175_transformed_charset_normalizer_filetype.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0469
+      }
+    ]
+  },
+  {
+    "id": "q176_class_attr_charset_normalizer_filetype.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "charset_normalizer",
+      "charset_normalizer"
+    ],
+    "excluded_weak": [
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2266
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0469
+      }
+    ]
+  },
+  {
+    "id": "q177_exact_numpy_createfuncwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy",
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q178_renamed_numpy_createfuncwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q179_transformed_numpy_createfuncwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q180_deleted_numpy_createfuncwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.5781
+      },
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q182_exact_numpy_buildcallback.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      }
+    ]
+  },
+  {
+    "id": "q183_renamed_numpy_buildcallback.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      }
+    ]
+  },
+  {
+    "id": "q184_transformed_numpy_buildcallback.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      }
+    ]
+  },
+  {
+    "id": "q185_deleted_numpy_buildcallback.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q187_exact_numpy_scaninputline.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q188_renamed_numpy_scaninputline.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q189_transformed_numpy_scaninputline.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q190_deleted_numpy_scaninputline.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q191_reordered_numpy_scaninputline.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q192_exact_numpy_createsubrwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy",
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q193_renamed_numpy_createsubrwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q194_transformed_numpy_createsubrwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      }
+    ]
+  },
+  {
+    "id": "q195_deleted_numpy_createsubrwrapper.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      }
+    ]
+  },
+  {
+    "id": "q202_exact_numpy__fit.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q203_renamed_numpy__fit.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q204_transformed_numpy__fit.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q205_deleted_numpy__fit.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q206_reordered_numpy__fit.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q207_exact_numpy__info.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q208_renamed_numpy__info.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q209_transformed_numpy__info.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q210_deleted_numpy__info.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q211_reordered_numpy__info.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      }
+    ]
+  },
+  {
+    "id": "q220_exact_numpy_matrix.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy",
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q221_transformed_numpy_matrix.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q222_class_attr_numpy_matrix.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "numpy"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1484
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q226_exact_pandas_bootstrap_plot.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q227_transformed_pandas_bootstrap_plot.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2578
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q228_deleted_pandas_bootstrap_plot.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2578
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.25
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      }
+    ]
+  },
+  {
+    "id": "q229_reordered_pandas_bootstrap_plot.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q230_exact_pandas_git_pieces_from_vcs.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q231_renamed_pandas_git_pieces_from_vcs.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q232_transformed_pandas_git_pieces_from_vcs.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.1016
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q233_deleted_pandas_git_pieces_from_vcs.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-mpl",
+        "license": "MPL-2.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q234_reordered_pandas_git_pieces_from_vcs.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q245_exact_pandas_parallel_coordinates.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      }
+    ]
+  },
+  {
+    "id": "q246_transformed_pandas_parallel_coordinates.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "id": "q247_deleted_pandas_parallel_coordinates.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      }
+    ]
+  },
+  {
+    "id": "q248_reordered_pandas_parallel_coordinates.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.2422
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      }
+    ]
+  },
+  {
+    "id": "q249_exact_pandas_array_ufunc.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q250_renamed_pandas_array_ufunc.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q251_transformed_pandas_array_ufunc.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0547
+      }
+    ]
+  },
+  {
+    "id": "q253_reordered_pandas_array_ufunc.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0781
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q254_exact_pandas_json_normalize.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      }
+    ]
+  },
+  {
+    "id": "q255_renamed_pandas_json_normalize.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      }
+    ]
+  },
+  {
+    "id": "q256_transformed_pandas_json_normalize.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      }
+    ]
+  },
+  {
+    "id": "q257_deleted_pandas_json_normalize.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1328
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      }
+    ]
+  },
+  {
+    "id": "q258_reordered_pandas_json_normalize.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "pandas",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 1.0
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1406
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1016
+      }
+    ]
+  },
+  {
+    "id": "q264_exact_pandas_arrowstringarray.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1641
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0156
+      }
+    ]
+  },
+  {
+    "id": "q265_transformed_pandas_arrowstringarray.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q266_class_attr_pandas_arrowstringarray.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1562
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.125
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0938
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q267_exact_pandas_objectstringarraymixin.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1172
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q268_transformed_pandas_objectstringarraymixin.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q269_class_attr_pandas_objectstringarraymixin.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.1094
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      }
+    ]
+  },
+  {
+    "id": "q270_exact_pandas_expression.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0391
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0234
+      }
+    ]
+  },
+  {
+    "id": "q271_transformed_pandas_expression.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "numpy",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  },
+  {
+    "id": "q272_class_attr_pandas_expression.py",
+    "status_old": "INCOMPATIBLE",
+    "status_new": "COMPATIBLE",
+    "conclusion_sources": [
+      "pandas",
+      "pandas",
+      "pandas"
+    ],
+    "excluded_weak": [
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0859
+      },
+      {
+        "source": "license_expression",
+        "license": "Apache-2.0",
+        "level": 3,
+        "similarity": 0.0703
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "click",
+        "license": "BSD-3-Clause",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "datasketch",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0625
+      },
+      {
+        "source": "distractor-gpl",
+        "license": "GPL-2.0",
+        "level": 3,
+        "similarity": 0.0547
+      },
+      {
+        "source": "charset_normalizer",
+        "license": "MIT",
+        "level": 3,
+        "similarity": 0.0469
+      },
+      {
+        "source": "distractor-lgpl",
+        "license": "LGPL-3.0",
+        "level": 3,
+        "similarity": 0.0312
+      }
+    ]
+  }
+]

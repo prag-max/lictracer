@@ -1,0 +1,20 @@
+# AST parsing (pinned to real existing versions)
+tree-sitter==0.26.0
+tree-sitter-python==0.25.0
+
+# License handling (pinned to real existing versions)
+license-expression==30.4.4
+osadl-matrix==2024.5.22.10535
+
+# Evidence refinement (code duplication analyzer)
+redup==0.4.46
+
+# Config / tooling
+pyyaml>=6.0
+python-dotenv>=1.0.0
+click>=8.1.0
+datasketch>=2.0.0
+numpy>=1.24
+
+# Testing
+pytest>=7.0.0

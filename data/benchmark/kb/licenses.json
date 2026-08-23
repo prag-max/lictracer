@@ -1,0 +1,17 @@
+{
+  "requests": "MIT",
+  "flask": "BSD-3-Clause",
+  "numpy": "BSD-3-Clause",
+  "pandas": "BSD-3-Clause",
+  "django": "BSD-3-Clause",
+  "click": "BSD-3-Clause",
+  "pyyaml": "MIT",
+  "scipy": "BSD-3-Clause",
+  "celery": "BSD-3-Clause",
+  "arrow": "Apache-2.0",
+  "gpl-crypto": "GPL-3.0",
+  "mpl-utils": "MPL-2.0",
+  "lgpl-image": "LGPL-3.0",
+  "tokenizer": "MIT",
+  "config-class": "MIT"
+}

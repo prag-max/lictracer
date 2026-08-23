@@ -1,0 +1,73 @@
+# ============================================================
+# LicTracer 打包配置（PEP 621）
+# 安装方式：pip install -e . （开发） / pip install . （部署）
+# 安装后 `import src.*` 由已安装包解析，不再依赖 sys.path hack。
+# ============================================================
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lictracer"
+version = "0.1.0"
+description = "面向 AI 生成代码的许可证合规审计系统（License + Tracer）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # AST parsing（与 requirements.txt 严格同步）
+    "tree-sitter==0.26.0",
+    "tree-sitter-python==0.25.0",
+    # License handling
+    "license-expression==30.4.4",
+    "osadl-matrix==2024.5.22.10535",
+    # Evidence refinement
+    "redup==0.4.46",
+    # Config / tooling
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "click>=8.1.0",
+    "datasketch>=2.0.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0.0", "ruff>=0.6"]
+
+[project.scripts]
+lictracer = "src.cli.main:cli"
+
+[tool.setuptools]
+# 顶层包名保持 `src`（与全部 `from src.xxx import ...` 一致），
+# 从项目根发现 src 及其子包（排除无 __init__.py 的 ui/config/data/tests）。
+packages = {find = {where = ["."], include = ["src*"]}}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# 默认排除基准级重测试（分钟级），保证日常回归秒级反馈；
+# 全量回归用 `pytest -m ""`（CI 的 full 作业与发布前验证使用）。
+addopts = "-m 'not slow'"
+markers = [
+    "slow: 基准级重测试（重建 KB/评估数据，分钟级）——默认排除，CI 夜间/手动全量通道运行",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+# data/raw_sources 为真实开源包源码归档（第三方代码），sample.py 为 CLI 演示输入——均不参与 lint
+extend-exclude = [".venv", ".pytest_tmp", "data", "sample.py"]
+
+[tool.ruff.lint]
+select = [
+    "E4", # pycodestyle：导入位置等
+    "E7", # pycodestyle：语句级错误
+    "E9", # pycodestyle：运行时错误
+    "F",  # pyflakes：未用变量/未定义名等
+    "W",  # pycodestyle 警告（尾随空白等）
+    "I",  # isort：导入排序
+    "B",  # flake8-bugbear：常见缺陷模式
+]
+
+[tool.ruff.lint.per-file-ignores]
+# evaluation/ 与 tests/ 采用「先引导项目根到 sys.path、再导入」的开发 harness 模式（有意为之）
+"evaluation/*" = ["E402", "I001"]
+"tests/*" = ["E402"]

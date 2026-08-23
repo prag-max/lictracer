@@ -1,0 +1,1966 @@
+{
+  "project_license": "MIT",
+  "kb_path": "E:\\detection-system-for-CLV\\lictracer\\data\\benchmark_mixed\\kb",
+  "queries": [
+    {
+      "id": "q001_exact_click_isolation.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q002_renamed_click_isolation.py",
+      "kind": "renamed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q003_transformed_click_isolation.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q004_deleted_click_isolation.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q005_reordered_click_isolation.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q006_exact_click_open_stream.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q007_transformed_click_open_stream.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q008_deleted_click_open_stream.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q009_reordered_click_open_stream.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q010_exact_click__pipepager.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q011_transformed_click__pipepager.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q012_deleted_click__pipepager.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q013_reordered_click__pipepager.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q014_exact_click_style.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q015_transformed_click_style.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q016_deleted_click_style.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q017_reordered_click_style.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q018_exact_click_render_progress.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q019_renamed_click_render_progress.py",
+      "kind": "renamed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q020_transformed_click_render_progress.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q021_deleted_click_render_progress.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q022_reordered_click_render_progress.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q023_exact_click_wrap_text.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q024_renamed_click_wrap_text.py",
+      "kind": "renamed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q025_transformed_click_wrap_text.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q026_deleted_click_wrap_text.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q027_reordered_click_wrap_text.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q028_exact_click__tempfilepager.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q029_transformed_click__tempfilepager.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q030_deleted_click__tempfilepager.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q031_reordered_click__tempfilepager.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q032_exact_click_auto_wrap_for_ansi.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q033_renamed_click_auto_wrap_for_ansi.py",
+      "kind": "renamed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q034_transformed_click_auto_wrap_for_ansi.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q035_deleted_click_auto_wrap_for_ansi.py",
+      "kind": "deleted",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q036_reordered_click_auto_wrap_for_ansi.py",
+      "kind": "reordered",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q037_exact_click_progressbar.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q038_transformed_click_progressbar.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q039_class_attr_click_progressbar.py",
+      "kind": "class_attr",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q040_exact_click_helpformatter.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q041_transformed_click_helpformatter.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q042_class_attr_click_helpformatter.py",
+      "kind": "class_attr",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q043_exact_click_lazyfile.py",
+      "kind": "exact",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q044_transformed_click_lazyfile.py",
+      "kind": "transformed",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q045_class_attr_click_lazyfile.py",
+      "kind": "class_attr",
+      "expected_project": "click",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q046_exact_datasketch_minhash_many.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q047_renamed_datasketch_minhash_many.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q048_transformed_datasketch_minhash_many.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q049_deleted_datasketch_minhash_many.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q050_reordered_datasketch_minhash_many.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q051_exact_datasketch__compute_best_partitions.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q052_renamed_datasketch__compute_best_partitions.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q053_transformed_datasketch__compute_best_partitions.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q054_deleted_datasketch__compute_best_partitions.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q055_reordered_datasketch__compute_best_partitions.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q056_exact_datasketch_get_minhash_hashvalues.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q057_renamed_datasketch_get_minhash_hashvalues.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q058_transformed_datasketch_get_minhash_hashvalues.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q059_deleted_datasketch_get_minhash_hashvalues.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q060_reordered_datasketch_get_minhash_hashvalues.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q061_exact_datasketch_minhash.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q062_renamed_datasketch_minhash.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q063_transformed_datasketch_minhash.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q064_deleted_datasketch_minhash.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q065_reordered_datasketch_minhash.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q066_exact_datasketch_jaccard.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q067_renamed_datasketch_jaccard.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q068_transformed_datasketch_jaccard.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q069_deleted_datasketch_jaccard.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q070_reordered_datasketch_jaccard.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q071_exact_datasketch_index.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q072_renamed_datasketch_index.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q073_transformed_datasketch_index.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q074_deleted_datasketch_index.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q075_reordered_datasketch_index.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q076_exact_datasketch_update_batch.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q077_renamed_datasketch_update_batch.py",
+      "kind": "renamed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q078_transformed_datasketch_update_batch.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q079_deleted_datasketch_update_batch.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q080_reordered_datasketch_update_batch.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q081_exact_datasketch__query_b.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q082_transformed_datasketch__query_b.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q083_deleted_datasketch__query_b.py",
+      "kind": "deleted",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q084_reordered_datasketch__query_b.py",
+      "kind": "reordered",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q085_exact_datasketch_asyncminhashlsh.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q086_transformed_datasketch_asyncminhashlsh.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q087_class_attr_datasketch_asyncminhashlsh.py",
+      "kind": "class_attr",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q088_exact_datasketch_minhash_2.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q089_transformed_datasketch_minhash_2.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q090_class_attr_datasketch_minhash_2.py",
+      "kind": "class_attr",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q091_exact_datasketch_hyperloglog.py",
+      "kind": "exact",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q092_transformed_datasketch_hyperloglog.py",
+      "kind": "transformed",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q093_class_attr_datasketch_hyperloglog.py",
+      "kind": "class_attr",
+      "expected_project": "datasketch",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q094_exact_license_expression_iter.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q095_renamed_license_expression_iter.py",
+      "kind": "renamed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q096_transformed_license_expression_iter.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q097_deleted_license_expression_iter.py",
+      "kind": "deleted",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q098_reordered_license_expression_iter.py",
+      "kind": "reordered",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q099_exact_license_expression_tokenize.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q100_renamed_license_expression_tokenize.py",
+      "kind": "renamed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q101_transformed_license_expression_tokenize.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q102_deleted_license_expression_tokenize.py",
+      "kind": "deleted",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q103_reordered_license_expression_tokenize.py",
+      "kind": "reordered",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q104_exact_license_expression_filter_overlapping.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q105_renamed_license_expression_filter_overlapping.py",
+      "kind": "renamed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q106_transformed_license_expression_filter_overlapping.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q107_deleted_license_expression_filter_overlapping.py",
+      "kind": "deleted",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q108_reordered_license_expression_filter_overlapping.py",
+      "kind": "reordered",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q109_exact_license_expression_make_automaton.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q110_renamed_license_expression_make_automaton.py",
+      "kind": "renamed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q111_transformed_license_expression_make_automaton.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q112_deleted_license_expression_make_automaton.py",
+      "kind": "deleted",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q113_reordered_license_expression_make_automaton.py",
+      "kind": "reordered",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q114_exact_license_expression_items.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q115_renamed_license_expression_items.py",
+      "kind": "renamed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q116_transformed_license_expression_items.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q117_deleted_license_expression_items.py",
+      "kind": "deleted",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q118_reordered_license_expression_items.py",
+      "kind": "reordered",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q119_exact_license_expression_token.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q120_transformed_license_expression_token.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q121_class_attr_license_expression_token.py",
+      "kind": "class_attr",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q122_exact_license_expression_trie.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q123_transformed_license_expression_trie.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q124_class_attr_license_expression_trie.py",
+      "kind": "class_attr",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q125_exact_license_expression_trienode.py",
+      "kind": "exact",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q126_transformed_license_expression_trienode.py",
+      "kind": "transformed",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q127_class_attr_license_expression_trienode.py",
+      "kind": "class_attr",
+      "expected_project": "license_expression",
+      "expected_license": "Apache-2.0",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q128_exact_charset_normalizer_cli_detect.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q129_renamed_charset_normalizer_cli_detect.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q130_transformed_charset_normalizer_cli_detect.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q131_deleted_charset_normalizer_cli_detect.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q132_reordered_charset_normalizer_cli_detect.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q133_exact_charset_normalizer__character_flags.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q134_renamed_charset_normalizer__character_flags.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q135_transformed_charset_normalizer__character_flags.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q136_deleted_charset_normalizer__character_flags.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q137_reordered_charset_normalizer__character_flags.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q138_exact_charset_normalizer_characters_popularity_compare.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q139_renamed_charset_normalizer_characters_popularity_compare.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q140_transformed_charset_normalizer_characters_popularity_compare.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q141_deleted_charset_normalizer_characters_popularity_compare.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q142_reordered_charset_normalizer_characters_popularity_compare.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q143_exact_charset_normalizer_detect.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q144_renamed_charset_normalizer_detect.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q145_transformed_charset_normalizer_detect.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q146_deleted_charset_normalizer_detect.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q147_reordered_charset_normalizer_detect.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q148_exact_charset_normalizer_any_specified_encoding.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q149_renamed_charset_normalizer_any_specified_encoding.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q150_transformed_charset_normalizer_any_specified_encoding.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q151_deleted_charset_normalizer_any_specified_encoding.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q152_reordered_charset_normalizer_any_specified_encoding.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q153_exact_charset_normalizer_coherence_ratio.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q154_renamed_charset_normalizer_coherence_ratio.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q155_transformed_charset_normalizer_coherence_ratio.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q156_deleted_charset_normalizer_coherence_ratio.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q157_reordered_charset_normalizer_coherence_ratio.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q158_exact_charset_normalizer_alpha_unicode_split.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q159_renamed_charset_normalizer_alpha_unicode_split.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q160_transformed_charset_normalizer_alpha_unicode_split.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q161_deleted_charset_normalizer_alpha_unicode_split.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q162_reordered_charset_normalizer_alpha_unicode_split.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q163_exact_charset_normalizer_alphabet_languages.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q164_renamed_charset_normalizer_alphabet_languages.py",
+      "kind": "renamed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q165_transformed_charset_normalizer_alphabet_languages.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q166_deleted_charset_normalizer_alphabet_languages.py",
+      "kind": "deleted",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q167_reordered_charset_normalizer_alphabet_languages.py",
+      "kind": "reordered",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q168_exact_charset_normalizer_charsetmatch.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q169_transformed_charset_normalizer_charsetmatch.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q170_class_attr_charset_normalizer_charsetmatch.py",
+      "kind": "class_attr",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q171_exact_charset_normalizer_charsetmatches.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q172_transformed_charset_normalizer_charsetmatches.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q173_class_attr_charset_normalizer_charsetmatches.py",
+      "kind": "class_attr",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q174_exact_charset_normalizer_filetype.py",
+      "kind": "exact",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q175_transformed_charset_normalizer_filetype.py",
+      "kind": "transformed",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q176_class_attr_charset_normalizer_filetype.py",
+      "kind": "class_attr",
+      "expected_project": "charset_normalizer",
+      "expected_license": "MIT",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q177_exact_numpy_createfuncwrapper.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q178_renamed_numpy_createfuncwrapper.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q179_transformed_numpy_createfuncwrapper.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q180_deleted_numpy_createfuncwrapper.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q181_reordered_numpy_createfuncwrapper.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q182_exact_numpy_buildcallback.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q183_renamed_numpy_buildcallback.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q184_transformed_numpy_buildcallback.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q185_deleted_numpy_buildcallback.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q186_reordered_numpy_buildcallback.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q187_exact_numpy_scaninputline.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q188_renamed_numpy_scaninputline.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q189_transformed_numpy_scaninputline.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q190_deleted_numpy_scaninputline.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q191_reordered_numpy_scaninputline.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q192_exact_numpy_createsubrwrapper.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q193_renamed_numpy_createsubrwrapper.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q194_transformed_numpy_createsubrwrapper.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q195_deleted_numpy_createsubrwrapper.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q196_reordered_numpy_createsubrwrapper.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q197_exact_numpy_run_main.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q198_renamed_numpy_run_main.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q199_transformed_numpy_run_main.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q200_deleted_numpy_run_main.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q201_reordered_numpy_run_main.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q202_exact_numpy__fit.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q203_renamed_numpy__fit.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q204_transformed_numpy__fit.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q205_deleted_numpy__fit.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q206_reordered_numpy__fit.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q207_exact_numpy__info.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q208_renamed_numpy__info.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q209_transformed_numpy__info.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q210_deleted_numpy__info.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q211_reordered_numpy__info.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q212_exact_numpy_cb_routsign2map.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q213_renamed_numpy_cb_routsign2map.py",
+      "kind": "renamed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q214_transformed_numpy_cb_routsign2map.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q215_deleted_numpy_cb_routsign2map.py",
+      "kind": "deleted",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q216_reordered_numpy_cb_routsign2map.py",
+      "kind": "reordered",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q217_exact_numpy_container.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q218_transformed_numpy_container.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q219_class_attr_numpy_container.py",
+      "kind": "class_attr",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q220_exact_numpy_matrix.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q221_transformed_numpy_matrix.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q222_class_attr_numpy_matrix.py",
+      "kind": "class_attr",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q223_exact_numpy_ndarrayoperatorsmixin.py",
+      "kind": "exact",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q224_transformed_numpy_ndarrayoperatorsmixin.py",
+      "kind": "transformed",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q225_class_attr_numpy_ndarrayoperatorsmixin.py",
+      "kind": "class_attr",
+      "expected_project": "numpy",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q226_exact_pandas_bootstrap_plot.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q227_transformed_pandas_bootstrap_plot.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q228_deleted_pandas_bootstrap_plot.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q229_reordered_pandas_bootstrap_plot.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q230_exact_pandas_git_pieces_from_vcs.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q231_renamed_pandas_git_pieces_from_vcs.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q232_transformed_pandas_git_pieces_from_vcs.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q233_deleted_pandas_git_pieces_from_vcs.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q234_reordered_pandas_git_pieces_from_vcs.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q235_exact_pandas__process_format_subheader.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q236_renamed_pandas__process_format_subheader.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q237_transformed_pandas__process_format_subheader.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q238_deleted_pandas__process_format_subheader.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q239_reordered_pandas__process_format_subheader.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q240_exact_pandas_autocorrelation_plot.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q241_renamed_pandas_autocorrelation_plot.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q242_transformed_pandas_autocorrelation_plot.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q243_deleted_pandas_autocorrelation_plot.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q244_reordered_pandas_autocorrelation_plot.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q245_exact_pandas_parallel_coordinates.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q246_transformed_pandas_parallel_coordinates.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q247_deleted_pandas_parallel_coordinates.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q248_reordered_pandas_parallel_coordinates.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q249_exact_pandas_array_ufunc.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q250_renamed_pandas_array_ufunc.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q251_transformed_pandas_array_ufunc.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q252_deleted_pandas_array_ufunc.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q253_reordered_pandas_array_ufunc.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q254_exact_pandas_json_normalize.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q255_renamed_pandas_json_normalize.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q256_transformed_pandas_json_normalize.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q257_deleted_pandas_json_normalize.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q258_reordered_pandas_json_normalize.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q259_exact_pandas__get_properties.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q260_renamed_pandas__get_properties.py",
+      "kind": "renamed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q261_transformed_pandas__get_properties.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q262_deleted_pandas__get_properties.py",
+      "kind": "deleted",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q263_reordered_pandas__get_properties.py",
+      "kind": "reordered",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q264_exact_pandas_arrowstringarray.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q265_transformed_pandas_arrowstringarray.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q266_class_attr_pandas_arrowstringarray.py",
+      "kind": "class_attr",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q267_exact_pandas_objectstringarraymixin.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q268_transformed_pandas_objectstringarraymixin.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q269_class_attr_pandas_objectstringarraymixin.py",
+      "kind": "class_attr",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q270_exact_pandas_expression.py",
+      "kind": "exact",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q271_transformed_pandas_expression.py",
+      "kind": "transformed",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q272_class_attr_pandas_expression.py",
+      "kind": "class_attr",
+      "expected_project": "pandas",
+      "expected_license": "BSD-3-Clause",
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q273_negative_quicksort.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q274_negative_fibonacci.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q275_negative_file_copy.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q276_negative_calculator.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q277_negative_binary_search.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q278_negative_word_count.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q279_negative_matrix_multiply.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    },
+    {
+      "id": "q280_negative_linked_list.py",
+      "kind": "negative",
+      "expected_project": null,
+      "expected_license": null,
+      "expected_compat": "COMPATIBLE"
+    }
+  ]
+}
