@@ -7,12 +7,28 @@ from __future__ import annotations
 
 import logging
 import os
+import sys
 from pathlib import Path
 
 logger = logging.getLogger("lictracer.config")
 
-# 项目根目录（src/config.py 的上两级目录）
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+def _app_root() -> Path:
+    """应用资源根目录（config/ 与 data/ 的定位基准）。
+
+    - 开发态：仓库根（src/config.py 的上两级）；
+    - PyInstaller frozen：``sys._MEIPASS``（onedir 形态即 ``dist/LicTracer/_internal``，
+      config/ 与 data/knowledge_base 随包置于其下，相对路径规则与开发态完全一致）。
+    """
+    if getattr(sys, "frozen", False):
+        meipass = getattr(sys, "_MEIPASS", None)
+        if meipass:
+            return Path(meipass)
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parent.parent
+
+
+PROJECT_ROOT = _app_root()
 CONFIG_DIR = PROJECT_ROOT / "config"
 DATA_DIR = PROJECT_ROOT / "data"
 

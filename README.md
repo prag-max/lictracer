@@ -54,8 +54,12 @@ python -m venv .venv
 
 ### 部署形态
 
-- **桌面端（规划中的唯一用户交付形态）**：以 PySide6 原生窗口封装 `src.pipeline.analyze_file`，双击 exe 即用、代码不出本机。当前为 CLI 阶段，桌面 GUI 开发中。
-- **CLI（无界面入口）**：批量检测、评测复现、脚本集成，不依赖 GUI 与网络。
+- **桌面端（唯一用户交付形态）**：PySide6 单窗口应用（`src/ui/`），本地离线、代码不出本机。
+  开发态运行 `.venv\Scripts\lictracer-gui`（或 `python -m src.ui.main`）；
+  发布构建 `powershell -File packaging\build_exe.ps1` → 免安装 onedir 产物 `dist/LicTracer/`
+  （内置默认知识库随包分发，高级选项可覆盖自定义 KB），发布前按
+  `docs/桌面端发布自检清单.md` 在干净机器逐项核验。
+- **CLI（无界面入口，保留）**：批量检测、评测复现、脚本集成，不依赖 GUI 与网络。
 - **服务部署已退役**：原 FastAPI / Streamlit / Docker 部署形态已移除（见 `docs/发布前验证报告.html` 退役说明），相关 `LICT_API_TOKEN` / `LICT_MAX_UPLOAD_BYTES` 等环境变量不再生效。
 
 ## 报告与输出

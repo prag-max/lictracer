@@ -120,11 +120,13 @@ def analyze_file(
     project_license=None,
     top_k=None,
     kb_path=None,
+    min_anchor_lines=None,
     include_summary=True,
 ) -> dict:
     """分析单个 .py 文件，返回完整报告 dict。
 
-    所有参数均可由 config/settings.yaml 提供，也可显式覆盖（便于测试与复用）。
+    所有参数均可由 config/settings.yaml 提供，也可显式覆盖（便于测试与复用）；
+    ``min_anchor_lines`` 供桌面端高级选项覆盖 L3 锚点游程门槛，缺省取 settings。
     """
     settings = load_settings()
     # 方法学边界可见化：OSADL 快照时效告警（离线、每进程至多一次，不影响结论）
@@ -137,6 +139,8 @@ def analyze_file(
     if kb_path is None:
         kb_path = knowledge_base_path()
     kb_path = Path(kb_path)
+    if min_anchor_lines is None:
+        min_anchor_lines = settings.get("min_anchor_lines", 3)
 
     code = Path(path).read_text(encoding="utf-8")
 
@@ -154,7 +158,7 @@ def analyze_file(
     # 3.5 确定性等价验证（替代旧 e2e_clone_threshold 0.30 结构兜底，决策路径无浮点阈值）：
     #   L1 规范型精确相等（T1/T2）/ L2 函数体规范语句序列包含（T3）/ L3 锚点行游程。
     #   已获 redup 证据的文件补记 verification_level；未覆盖的文件补确定性证据。
-    min_anchor = int(settings.get("min_anchor_lines", 3))
+    min_anchor = int(min_anchor_lines)
     verdicts = verify_candidates(
         candidates,
         nl_client.kb.read_file,
