@@ -16,5 +16,6 @@ click>=8.1.0
 datasketch>=2.0.0
 numpy>=1.24
 
-# Testing
+# Testing / dev tooling
 pytest>=7.0.0
+ruff>=0.6
