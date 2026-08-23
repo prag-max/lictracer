@@ -10,6 +10,7 @@
 from __future__ import annotations
 
 import sys
+import traceback
 from pathlib import Path
 
 from PySide6.QtCore import QSettings, Qt
@@ -692,7 +693,50 @@ class MainWindow(QMainWindow):
         s.setValue("kb_override", self.kb_edit.text().strip())
 
 
+def _run_selfcheck() -> int:
+    """frozen 环境自检：端到端验证打包产物内的完整分析链路。
+
+    结果写入 exe 同目录 ``selfcheck_result.txt``（窗口程序无控制台可依赖，
+    落盘是最可靠的可观测方式）。供发布自检清单与远程排障使用：
+    ``LicTracer.exe --selfcheck`` 后查看该文件。
+    """
+    lines: list[str] = []
+    code = 0
+    try:
+        from src.pipeline import analyze_text
+
+        rep = analyze_text(
+            "import os\n\n\ndef calc(a, b):\n    total = a + b\n    return total\n"
+        )
+        m = rep.get("methodology") or {}
+        cr = rep.get("compliance_result") or {}
+        lines.append("SELFCHECK OK")
+        lines.append(f"tree_sitter = {m.get('tree_sitter')}")
+        lines.append(f"retriever_mode = {m.get('retriever_mode')}")
+        lines.append(f"kb_files = {m.get('kb_files')}")
+        lines.append(f"anchor = {m.get('verification_min_anchor_lines')}")
+        lines.append(f"status = {cr.get('status')} risk = {cr.get('risk_level')}")
+    except Exception:
+        code = 1
+        lines.append("SELFCHECK FAILED")
+        lines.append(traceback.format_exc())
+
+    out_name = "selfcheck_result.txt"
+    if getattr(sys, "frozen", False):
+        out_path = Path(sys.executable).resolve().parent / out_name
+    else:
+        out_path = Path.cwd() / out_name
+    try:
+        out_path.write_text("\n".join(lines), encoding="utf-8")
+    except OSError:
+        pass
+    print("\n".join(lines))
+    return code
+
+
 def main() -> int:
+    if "--selfcheck" in sys.argv[1:]:
+        return _run_selfcheck()
     app = QApplication(sys.argv)
     app.setApplicationName("LicTracer")
     app.setOrganizationName("LicTracer")
