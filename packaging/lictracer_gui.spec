@@ -47,6 +47,7 @@ a = Analysis(
     datas=[
         ("..\\config", "config"),
         ("..\\data\\knowledge_base", "data\\knowledge_base"),
+        ("..\\src\\ui\\assets", "src/ui/assets"),
     ]
     + osadl_datas,
     hiddenimports=src_modules
@@ -84,6 +85,7 @@ exe = EXE(
     strip=False,
     upx=False,  # UPX 易触发杀软误报，保持关闭
     console=debug_console,  # 默认窗口应用无控制台；调试变体为 True
+    icon="app.ico",  # 应用图标（位于本 spec 同目录，由 scripts/make_icon.py 生成）
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
