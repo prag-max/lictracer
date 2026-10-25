@@ -7,7 +7,7 @@ license-expression==30.4.4
 osadl-matrix==2024.5.22.10535
 
 # Evidence refinement (code duplication analyzer)
-redup==0.4.46
+redup==0.4.49
 
 # Config / tooling
 pyyaml>=6.0
