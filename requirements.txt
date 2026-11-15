@@ -1,5 +1,5 @@
 # AST parsing (pinned to real existing versions)
-tree-sitter==0.26.0
+tree-sitter==0.26.1
 tree-sitter-python==0.25.0
 
 # License handling (pinned to real existing versions)
